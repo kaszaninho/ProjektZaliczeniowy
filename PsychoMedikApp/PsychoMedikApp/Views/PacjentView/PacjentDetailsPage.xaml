@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:PsychoMedikApp.ViewModels.PacjentVM" xmlns:model="clr-namespace:PsychoMedik.Service.Reference"
+             x:Class="PsychoMedikApp.Views.PacjentView.PacjentDetailsPage"
+             Title="Szczegóły Pacjenta">
+    <ContentPage.Content>
+        <StackLayout Spacing="3" Padding="15">
+            <Label Text="Imię" FontSize="Medium" />
+            <Label Text="{Binding Imie}" FontSize="Medium" />
+            <Label Text="Nazwisko" FontSize="Medium" />
+            <Label Text="{Binding Nazwisko}" FontSize="Medium" />
+            <Label Text="Data urodzenia" FontSize="Medium" />
+            <Label Text="{Binding DataUrodzenia}" FontSize="Medium" />
+            <Label Text="Lekarz prowadzący" FontSize="Medium" />
+            <Label Text="{Binding ImieNazwiskoPracownikaProwadzacego}" FontSize="Medium" />
+            <Label Text="Płeć" FontSize="Medium" />
+            <Label Text="{Binding Plec}" FontSize="Medium" />
+            <Label Text="Data utworzenia" FontSize="Medium" />
+            <Label Text="{Binding DataUtworzenia}" FontSize="Medium" />
+            <Label Text="Data modyfikacji" FontSize="Medium" />
+            <Label Text="{Binding DataModyfikacji}" FontSize="Medium" />
+            <RefreshView x:DataType="local:PacjentDetailsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+                <CollectionView x:Name="PacjenciListView"
+                                ItemsSource="{Binding HistorieChoroby}"
+                                SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="10" x:DataType="model:HistoriaChorobyForView">
+                                <Label Text="{Binding Id}" 
+                                    LineBreakMode="NoWrap" 
+                                    Style="{DynamicResource ListItemTextStyle}"
+                                    FontSize="12" />
+                                <Label Text="{Binding NazwaChoroby}" 
+                                    LineBreakMode="NoWrap" 
+                                    Style="{DynamicResource ListItemTextStyle}" 
+                                    FontSize="16" />
+                                <Label Text="{Binding DataZdiagnozowania}" 
+                                    LineBreakMode="NoWrap" 
+                                    Style="{DynamicResource ListItemTextStyle}" 
+                                    FontSize="16" />
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:PacjentDetailsViewModel}}, Path=ItemTapped}"
+                                CommandParameter="{Binding .}">
+                                    </TapGestureRecognizer>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </RefreshView>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Anuluj" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Usuń" Command="{Binding DeleteCommand}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Dodaj chorobę" Command="{Binding AddHistoriaChorobyCommand}" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

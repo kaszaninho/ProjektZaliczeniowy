@@ -21,13 +21,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\Pacjent\NewPacjentPage.xaml.cs">
+    <Compile Update="Views\HistoriaChorobyView\AddHistoriaChorobyPage.xaml.cs">
+      <DependentUpon>AddHistoriaChorobyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HistoriaChorobyView\HistoriaChorobyDetailsPage.xaml.cs">
+      <DependentUpon>HistoriaChorobyDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PacjentView\NewPacjentPage.xaml.cs">
       <DependentUpon>NewPacjentPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Pacjent\PacjentDetailsPage.xaml.cs">
+    <Compile Update="Views\PacjentView\PacjentDetailsPage.xaml.cs">
       <DependentUpon>PacjentDetailsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Pacjent\PacjentPage.xaml.cs">
+    <Compile Update="Views\PacjentView\PacjentPage.xaml.cs">
       <DependentUpon>PacjentPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\PokojView\NewPokojPage.xaml.cs">

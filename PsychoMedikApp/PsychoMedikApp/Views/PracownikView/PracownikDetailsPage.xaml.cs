@@ -21,12 +21,13 @@ namespace PsychoMedikApp.Views.PracownikView
         public PracownikDetailsPage()
         {
             InitializeComponent();
-            BindingContext = new PracownikDetailsViewModel();
+            BindingContext = _viewModel = new PracownikDetailsViewModel();
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            _viewModel.OnAppearing();
         }
     }
 }

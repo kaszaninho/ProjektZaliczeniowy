@@ -1,6 +1,7 @@
 ﻿using PsychoMedikApp.ViewModels;
 using PsychoMedikApp.Views;
 using PsychoMedikApp.Views.ChorobaView;
+using PsychoMedikApp.Views.HistoriaChorobyView;
 using PsychoMedikApp.Views.ObjawView;
 using PsychoMedikApp.Views.PacjentView;
 using PsychoMedikApp.Views.PokojView;
@@ -32,6 +33,9 @@ namespace PsychoMedikApp
             Routing.RegisterRoute(nameof(NewPokojPage), typeof(NewPokojPage));
             Routing.RegisterRoute(nameof(AddWizytaPage), typeof(AddWizytaPage));
             Routing.RegisterRoute(nameof(WizytaDetailsPage), typeof(WizytaDetailsPage));
+            Routing.RegisterRoute(nameof(AddHistoriaChorobyPage), typeof(AddHistoriaChorobyPage));
+            Routing.RegisterRoute(nameof(HistoriaChorobyDetailsPage), typeof(HistoriaChorobyDetailsPage));
+            Routing.RegisterRoute("AboutPage", typeof(AboutPage));
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)

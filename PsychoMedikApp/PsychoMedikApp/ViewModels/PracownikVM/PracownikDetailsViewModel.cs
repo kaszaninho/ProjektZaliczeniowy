@@ -17,13 +17,12 @@ using Xamarin.Forms;
 
 namespace PsychoMedikApp.ViewModels.PracownikVM
 {
-    public class PracownikDetailsViewModel : AItemDetailsViewModel<PracownikForView>
+    public class PracownikDetailsViewModel : AItemDetailsListViewModel<PracownikForView, WizytaForView>
     {
         public PracownikDetailsViewModel()
-            : base()
+            : base("Pracownik")
         {
             Wizyty = new ObservableCollection<WizytaForView>();
-            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
             AddWizytaCommand = new Command(async () => await Shell.Current.GoToAsync($"{nameof(AddWizytaPage)}?{nameof(AddWizytaViewModel.IdPracownika)}={Id}"));
         }
 
@@ -55,7 +54,6 @@ namespace PsychoMedikApp.ViewModels.PracownikVM
         public string Plec { get => plec; set => SetProperty(ref plec, value); }
         public string NazwaStanowisko { get => nazwaStanowisko; set => SetProperty(ref nazwaStanowisko, value); }
         public ObservableCollection<WizytaForView> Wizyty { get; }
-        public Command LoadItemsCommand { get; }
         public Command AddWizytaCommand { get; }
         #endregion
 
@@ -99,7 +97,7 @@ namespace PsychoMedikApp.ViewModels.PracownikVM
             }
         }
 
-        public async void OnItemSelected(WizytaForView item)
+        public async override void OnItemSelected(WizytaForView item)
         {
             if (item == null)
             {
@@ -108,5 +106,8 @@ namespace PsychoMedikApp.ViewModels.PracownikVM
             await Shell.Current.GoToAsync($"{nameof(WizytaDetailsPage)}?{nameof(WizytaDetailsViewModel.ItemId)}={item.Id}");
         }
 
+        public override void GoToAddPage()
+        {
+        }
     }
 }
