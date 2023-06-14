@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PsychoMedikApp.Views.WizytaView.WizytaDetailsPage"
+             Title="Szczegóły Choroby">
+    <ContentPage.Content>
+        <StackLayout Spacing="3" Padding="15">
+            <Label Text="Lekarz" FontSize="Medium" />
+            <Label Text="{Binding ImieNazwiskoPracownika}" FontSize="Medium" />
+            <Label Text="{Binding IdPracownika}" FontSize="Small" />
+            <Label Text="Pacjent" FontSize="Medium" />
+            <Label Text="{Binding ImieNazwiskoPacjenta}" FontSize="Medium" />
+            <Label Text="{Binding IdPacjenta}" FontSize="Small" />
+            <Label Text="Pokój" FontSize="Medium" />
+            <Label Text="{Binding IdPokoju}" FontSize="Medium" />
+            <Label Text="Data wizyty" FontSize="Medium" />
+            <Label Text="{Binding DataWizyty}" FontSize="Medium" />
+            <Label Text="Data utworzenia" FontSize="Medium" />
+            <Label Text="{Binding DataUtworzenia}" FontSize="Medium" />
+            <Label Text="Data modyfikacji" FontSize="Medium" />
+            <Label Text="{Binding DataModyfikacji}" FontSize="Medium" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Cofnij" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

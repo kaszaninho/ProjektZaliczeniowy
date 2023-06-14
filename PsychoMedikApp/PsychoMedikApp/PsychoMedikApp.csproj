@@ -1,16 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
   </PropertyGroup>
-
-  <ItemGroup>
-    <OpenApiReference Include="OpenAPIs\swagger.json" Namespace="PsychoMedik.Service.Reference" ClassName="PsychoMedikService">
-      <CodeGenerator>NSwagCSharp</CodeGenerator>
-      <SourceUri>https://localhost:7067/swagger/v1/swagger.json</SourceUri>
-    </OpenApiReference>
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="6.0.16">
@@ -25,5 +18,59 @@
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2578" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.7.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\Pacjent\NewPacjentPage.xaml.cs">
+      <DependentUpon>NewPacjentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Pacjent\PacjentDetailsPage.xaml.cs">
+      <DependentUpon>PacjentDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Pacjent\PacjentPage.xaml.cs">
+      <DependentUpon>PacjentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PokojView\NewPokojPage.xaml.cs">
+      <DependentUpon>NewPokojPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PokojView\PokojDetailsPage.xaml.cs">
+      <DependentUpon>PokojDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PokojView\PokojPage.xaml.cs">
+      <DependentUpon>PokojPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\StanowiskoView\NewStanowiskoPage.xaml.cs">
+      <DependentUpon>NewStanowiskoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\StanowiskoView\StanowiskoDetailsPage.xaml.cs">
+      <DependentUpon>StanowiskoDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\StanowiskoView\StanowiskoPage.xaml.cs">
+      <DependentUpon>StanowiskoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PracownikView\NewPracownikPage.xaml.cs">
+      <DependentUpon>NewPracownikPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PracownikView\PracownikDetailsPage.xaml.cs">
+      <DependentUpon>PracownikDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PracownikView\PracownikPage.xaml.cs">
+      <DependentUpon>PracownikPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\WizytaView\WizytaDetailsPage.xaml.cs">
+      <DependentUpon>WizytaDetailsPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <OpenApiReference Include="OpenAPIs\swagger2.json" CodeGenerator="NSwagCSharp" Namespace="PsychoMedik.Service.Reference" ClassName="PsychoMedikService">
+      <SourceUri>https://localhost:7067/swagger/v1/swagger.json</SourceUri>
+    </OpenApiReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\WizytaView\AddWizytaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

@@ -9,29 +9,29 @@ using System.Threading.Tasks;
 
 namespace PsychoMedikApp.Services
 {
-    public class PracownikDataStore : AListDataStore<Pracownik>
+    public class PracownikDataStore : AListDataStore<PracownikForView>
     {
         public PracownikDataStore()
             : base()
         {
         }
 
-        public override async Task<Pracownik> AddItemToService(Pracownik item)
+        public override async Task<PracownikForView> AddItemToService(PracownikForView item)
         {
             return await _service.PracownikPOSTAsync(item);
         }
 
-        public override async Task<bool> DeleteItemFromService(Pracownik item)
+        public override async Task<bool> DeleteItemFromService(PracownikForView item)
         {
             return await _service.PracownikDELETEAsync(item.Id).HandleRequest();
         }
 
-        public override async Task<Pracownik> Find(Pracownik item)
+        public override async Task<PracownikForView> Find(PracownikForView item)
         {
             return await _service.PracownikGETAsync(item.Id);
         }
 
-        public override async Task<Pracownik> Find(int id)
+        public override async Task<PracownikForView> Find(int id)
         {
             return await _service.PracownikGETAsync(id);
         }
@@ -41,7 +41,7 @@ namespace PsychoMedikApp.Services
             items = _service.PracownikAllAsync().Result.ToList();
         }
 
-        public override async Task<bool> UpdateItemInService(Pracownik item)
+        public override async Task<bool> UpdateItemInService(PracownikForView item)
         {
             return await _service.PracownikPUTAsync(item.Id, item).HandleRequest();
         }

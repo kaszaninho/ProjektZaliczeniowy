@@ -9,29 +9,29 @@ using System.Threading.Tasks;
 
 namespace PsychoMedikApp.Services
 {
-    public class HistoriaChorobyDataStore : AListDataStore<HistoriaChoroby>
+    public class HistoriaChorobyDataStore : AListDataStore<HistoriaChorobyForView>
     {
         public HistoriaChorobyDataStore()
             : base()
         {
         }
 
-        public override async Task<HistoriaChoroby> AddItemToService(HistoriaChoroby item)
+        public override async Task<HistoriaChorobyForView> AddItemToService(HistoriaChorobyForView item)
         {
             return await _service.HistoriaChorobyPOSTAsync(item);
         }
 
-        public override async Task<bool> DeleteItemFromService(HistoriaChoroby item)
+        public override async Task<bool> DeleteItemFromService(HistoriaChorobyForView item)
         {
             return await _service.HistoriaChorobyDELETEAsync(item.Id).HandleRequest();
         }
 
-        public override async Task<HistoriaChoroby> Find(HistoriaChoroby item)
+        public override async Task<HistoriaChorobyForView> Find(HistoriaChorobyForView item)
         {
             return await _service.HistoriaChorobyGETAsync(item.Id);
         }
 
-        public override async Task<HistoriaChoroby> Find(int id)
+        public override async Task<HistoriaChorobyForView> Find(int id)
         {
             return await _service.HistoriaChorobyGETAsync(id);
         }
@@ -41,7 +41,7 @@ namespace PsychoMedikApp.Services
             items = _service.HistoriaChorobyAllAsync().Result.ToList();
         }
 
-        public override async Task<bool> UpdateItemInService(HistoriaChoroby item)
+        public override async Task<bool> UpdateItemInService(HistoriaChorobyForView item)
         {
             return await _service.HistoriaChorobyPUTAsync(item.Id, item).HandleRequest();
         }

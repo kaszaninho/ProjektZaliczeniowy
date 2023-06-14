@@ -11,7 +11,7 @@ namespace PsychoMedikApp.ViewModels.ObjawVM
     public class ObjawViewModel : AListViewModel<Objaw>
     {
         public ObjawViewModel()
-            : base("Choroby")
+            : base("Objawy")
         {
         }
 

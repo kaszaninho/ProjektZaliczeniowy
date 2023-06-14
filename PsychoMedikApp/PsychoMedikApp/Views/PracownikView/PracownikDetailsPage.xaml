@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:PsychoMedikApp.ViewModels.PracownikVM" 
+             xmlns:model="clr-namespace:PsychoMedik.Service.Reference"
+             x:Class="PsychoMedikApp.Views.PracownikView.PracownikDetailsPage"
+             Title="Szczegóły Pracownika">
+    <ContentPage.Content>
+        <StackLayout Spacing="3" Padding="15">
+            <Label Text="Nazwa" FontSize="Medium" />
+            <Label Text="{Binding Imie}" FontSize="Medium" />
+            <Label Text="Opis" FontSize="Medium" />
+            <Label Text="{Binding Nazwisko}" FontSize="Medium" />
+            <Label Text="Data urodzenia" FontSize="Medium" />
+            <Label Text="{Binding DataUrodzenia}" FontSize="Medium" />
+            <Label Text="Data zatrudnienia" FontSize="Medium" />
+            <Label Text="{Binding DataZatrudnienia}" FontSize="Medium" />
+            <Label Text="Data rezygnacji" FontSize="Medium" />
+            <Label Text="{Binding DataModyfikacji}" FontSize="Medium" />
+            <Label Text="Stan cywilny" FontSize="Medium" />
+            <Label Text="{Binding StanCywilny}" FontSize="Medium" />
+            <Label Text="Płeć" FontSize="Medium" />
+            <Label Text="{Binding Plec}" FontSize="Medium" />
+            <Label Text="Data utworzenia" FontSize="Medium" />
+            <Label Text="{Binding DataUtworzenia}" FontSize="Medium" />
+            <Label Text="Data modyfikacji" FontSize="Medium" />
+            <Label Text="{Binding DataModyfikacji}" FontSize="Medium" />
+            <RefreshView x:DataType="local:PracownikDetailsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+                <CollectionView x:Name="PacjenciListView"
+                                ItemsSource="{Binding Wizyty}"
+                                SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="10" x:DataType="model:WizytaForView">
+                                <Label Text="{Binding Id}" 
+                                    LineBreakMode="NoWrap" 
+                                    Style="{DynamicResource ListItemTextStyle}"
+                                    FontSize="12" />
+                                <Label Text="{Binding ImieNazwiskoPacjenta}" 
+                                    LineBreakMode="NoWrap" 
+                                    Style="{DynamicResource ListItemTextStyle}" 
+                                    FontSize="16" />
+                                <Label Text="{Binding DataWizyty}" 
+                                    LineBreakMode="NoWrap" 
+                                    Style="{DynamicResource ListItemTextStyle}" 
+                                    FontSize="16" />
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:PracownikDetailsViewModel}}, Path=ItemTapped}"
+                                CommandParameter="{Binding .}">
+                                    </TapGestureRecognizer>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>                            
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                                
+            </RefreshView>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Anuluj" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Usuń" Command="{Binding DeleteCommand}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Dodaj wizytę" Command="{Binding AddWizytaCommand}" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -3,6 +3,11 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:PsychoMedikApp.Views"
        xmlns:localChoroba="clr-namespace:PsychoMedikApp.Views.ChorobaView"      
+       xmlns:localObjaw="clr-namespace:PsychoMedikApp.Views.ObjawView"      
+       xmlns:localPracownik="clr-namespace:PsychoMedikApp.Views.PracownikView"      
+       xmlns:localStanowisko="clr-namespace:PsychoMedikApp.Views.StanowiskoView"      
+       xmlns:localPokoj="clr-namespace:PsychoMedikApp.Views.PokojView"      
+       xmlns:localPacjent="clr-namespace:PsychoMedikApp.Views.PacjentView"      
        Title="PsychoMedikApp"
        x:Class="PsychoMedikApp.AppShell">
 
@@ -83,7 +88,22 @@
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
     </FlyoutItem>
     <FlyoutItem Title="Choroby" Icon="icon_about.png">
-        <ShellContent Route="ChorobaPage" ContentTemplate="{DataTemplate localChoroba:ChorobaPage}" />
+        <ShellContent Route="ObjawPage" ContentTemplate="{DataTemplate localChoroba:ChorobaPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Objawy" Icon="icon_about.png">
+        <ShellContent Route="ObjawPage" ContentTemplate="{DataTemplate localObjaw:ObjawPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Pracownicy" Icon="icon_about.png">
+        <ShellContent Route="PracownikPage" ContentTemplate="{DataTemplate localPracownik:PracownikPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Stanowisko" Icon="icon_about.png">
+        <ShellContent Route="StanowiskoPage" ContentTemplate="{DataTemplate localStanowisko:StanowiskoPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Pokoje" Icon="icon_about.png">
+        <ShellContent Route="PokojPage" ContentTemplate="{DataTemplate localPokoj:PokojPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Pacjenci" Icon="icon_about.png">
+        <ShellContent Route="PacjentPage" ContentTemplate="{DataTemplate localPacjent:PacjentPage}" />
     </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
