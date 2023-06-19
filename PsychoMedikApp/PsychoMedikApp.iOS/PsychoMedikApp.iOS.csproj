@@ -142,4 +142,49 @@
       <Name>PsychoMedikApp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\psycho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\coronavirus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\diabetes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Dizzy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\doctor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hospital.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\nurse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\patient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\sick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\visit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\joker.png" />
+  </ItemGroup>
 </Project>

@@ -104,6 +104,18 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Assets\psycho.png" />
+    <Content Include="about.png" />
+    <Content Include="coronavirus.png" />
+    <Content Include="diabetes.png" />
+    <Content Include="Dizzy.png" />
+    <Content Include="doctor.png" />
+    <Content Include="heart.png" />
+    <Content Include="hospital.png" />
+    <Content Include="joker.png" />
+    <Content Include="Logout.png" />
+    <Content Include="nurse.png" />
+    <Content Include="patient.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
@@ -132,6 +144,10 @@
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <AndroidResource Include="psycho.png" />
+    <Content Include="room.png" />
+    <Content Include="sick.png" />
+    <Content Include="visit1.png" />
     <Content Include="xamarin_logo.png" />
     <Content Include="icon_about.png" />
     <Content Include="icon_feed.png" />

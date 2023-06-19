@@ -84,25 +84,25 @@
         FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
-    <FlyoutItem Title="About" Icon="icon_about.png">
+    <FlyoutItem Title="About" Icon="about.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Choroby" Icon="icon_about.png">
+    <FlyoutItem Title="Choroby" Icon="sick.png">
         <ShellContent Route="ObjawPage" ContentTemplate="{DataTemplate localChoroba:ChorobaPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Objawy" Icon="icon_about.png">
+    <FlyoutItem Title="Objawy" Icon="coronavirus.png">
         <ShellContent Route="ObjawPage" ContentTemplate="{DataTemplate localObjaw:ObjawPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Pracownicy" Icon="icon_about.png">
+    <FlyoutItem Title="Pracownicy" Icon="joker.png">
         <ShellContent Route="PracownikPage" ContentTemplate="{DataTemplate localPracownik:PracownikPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Stanowisko" Icon="icon_about.png">
+    <FlyoutItem Title="Stanowisko" Icon="doctor.png">
         <ShellContent Route="StanowiskoPage" ContentTemplate="{DataTemplate localStanowisko:StanowiskoPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Pokoje" Icon="icon_about.png">
+    <FlyoutItem Title="Pokoje" Icon="nurse.png">
         <ShellContent Route="PokojPage" ContentTemplate="{DataTemplate localPokoj:PokojPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Pacjenci" Icon="icon_about.png">
+    <FlyoutItem Title="Pacjenci" Icon="patient.png">
         <ShellContent Route="PacjentPage" ContentTemplate="{DataTemplate localPacjent:PacjentPage}" />
     </FlyoutItem>
 
