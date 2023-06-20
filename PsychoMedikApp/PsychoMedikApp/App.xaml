@@ -8,9 +8,20 @@
     <Application.Resources>
         <ResourceDictionary>
             <Color x:Key="Primary">#398397</Color>
-            <Style TargetType="Button">
+            <Style x:Key="BlueButton" TargetType="Button">
+                    <Setter Property="TextColor" Value="White"></Setter>
+                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                    <Setter Property="CornerRadius" Value="10" />
+                    <Setter Property="Padding" Value="10" />
+                    <Setter Property="Margin" Value="10" />
+                
+               
+
+           
+
                 <Setter Property="TextColor" Value="White"></Setter>
                 <Setter Property="VisualStateManager.VisualStateGroups">
+                    
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">
@@ -27,6 +38,26 @@
                     </VisualStateGroupList>
                 </Setter>
             </Style>
-        </ResourceDictionary>        
+            <Style x:Key="RedButton" TargetType="Button">
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="BackgroundColor" Value="#AF1414" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="Margin" Value="10" />
+            </Style>
+
+            <Style x:Key="YesButton" TargetType="Button">
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="BackgroundColor" Value="#2A83A9" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="Margin" Value="10" />
+            </Style>
+            <Style x:Key="BlueLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#2A83A9" />
+                <Setter Property="FontAttributes" Value="Bold, Italic" />
+                <Setter Property="FontSize" Value="18" />
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

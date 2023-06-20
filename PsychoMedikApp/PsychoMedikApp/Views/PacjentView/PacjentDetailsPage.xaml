@@ -52,9 +52,9 @@
 
             </RefreshView>
             <StackLayout Orientation="Horizontal">
-                <Button Text="Anuluj" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand" />
-                <Button Text="Usuń" Command="{Binding DeleteCommand}" HorizontalOptions="FillAndExpand" />
-                <Button Text="Dodaj chorobę" Command="{Binding AddHistoriaChorobyCommand}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Anuluj" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Usuń" Command="{Binding DeleteCommand}" Style="{StaticResource RedButton}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Dodaj chorobę" Command="{Binding AddHistoriaChorobyCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

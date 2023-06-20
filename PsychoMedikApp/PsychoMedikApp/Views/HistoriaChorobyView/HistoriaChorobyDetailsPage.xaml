@@ -27,7 +27,7 @@
             <Label Text="Data modyfikacji" FontSize="Medium" />
             <Label Text="{Binding DataModyfikacji}" FontSize="Medium" />
             <StackLayout Orientation="Horizontal">
-                <Button Text="Cofnij" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Cofnij" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

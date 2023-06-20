@@ -5,14 +5,19 @@
              Shell.PresentationMode="ModalAnimated"
              Title="Nowa Choroba">
     <ContentPage.Content>
-        <StackLayout Spacing="3" Padding="15">
-            <Label Text="Nazwa" FontSize="Medium" />
-            <Entry Text="{Binding Nazwa, Mode=TwoWay}" FontSize="Medium" />
-            <Label Text="Opis" FontSize="Medium" />
-            <Editor Text="{Binding Opis, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="1"/>
+        
+        
+        
+        <StackLayout Spacing="3" Padding="15" >
+            <Image Source="psycho.png" HorizontalOptions="Center" Aspect="AspectFit" />
+
+            <Label Text="Nazwa" FontSize="Medium" FontAttributes="Bold"/>
+            <Entry Text="{Binding Nazwa, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
+            <Label Text="Opis" FontSize="Medium" FontAttributes="Bold"/>
+            <Editor Text="{Binding Opis, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" AutoSize="TextChanges" FontSize="Medium" Margin="1"/>
             <StackLayout Orientation="Horizontal">
-                <Button Text="Anuluj" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand" />
-                <Button Text="Zapisz" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Anuluj" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Zapisz" Command="{Binding SaveCommand}" Style="{StaticResource RedButton}" HorizontalOptions="FillAndExpand" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

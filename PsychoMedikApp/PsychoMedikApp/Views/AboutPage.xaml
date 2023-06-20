@@ -20,27 +20,28 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                <ContentView Padding="0,0,0,0" VerticalOptions="FillAndExpand">
-                    <Image Source="psycho.png" VerticalOptions="Center" HorizontalOptions="Fill"  />
-                </ContentView>
-            </StackLayout>
-        </StackLayout>
+        
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                <Image Source="psycho.png" HorizontalOptions="Center" Aspect="AspectFit" />
+
                 <Label Text="PsychoMedikApp" FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center" />
-                <Label Text="Odkryj najśmieszniejszą stronę życia. Bo jak mawia starożytna mądrość: śmiech to najlepsze lekarstwo. A z nami - jest to terapia na wyciągnięcie ręki!" FontSize="16" Padding="0,0,0,0" />
+                <Label 
+                        Text="&#x0a;Odkryj najśmieszniejszą stronę życia. &#x0a;Bo jak mawia starożytna mądrość: śmiech to najlepsze lekarstwo. &#x0a;A z nami - jest to terapia na wyciągnięcie ręki!" 
+                        FontSize="16" 
+                        Padding="0,0,0,0"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center" />
+
                 <Label FontSize="16" Padding="0,24,0,0">
  
                 </Label>
                 <Button Margin="0,10,0,0" Text="Ściągnij z Repozytorium"
                         Command="{Binding OpenWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
-                        TextColor="White"
-                        CornerRadius="30"
-                        WidthRequest="200"
-                        HeightRequest="60" /> 
+                        Style="{StaticResource BlueButton}"/> 
             </StackLayout>
         </ScrollView>
     </Grid>

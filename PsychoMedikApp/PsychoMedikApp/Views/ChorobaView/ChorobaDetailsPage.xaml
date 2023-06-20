@@ -14,8 +14,8 @@
             <Label Text="Data modyfikacji" FontSize="Medium" />
             <Label Text="{Binding DataModyfikacji}" FontSize="Medium" />
             <StackLayout Orientation="Horizontal">
-                <Button Text="Anuluj" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand" />
-                <Button Text="Usuń" Command="{Binding DeleteCommand}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Anuluj"  Style="{StaticResource YesButton}" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Usuń"  Style="{StaticResource RedButton}" Command="{Binding DeleteCommand}" HorizontalOptions="FillAndExpand" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

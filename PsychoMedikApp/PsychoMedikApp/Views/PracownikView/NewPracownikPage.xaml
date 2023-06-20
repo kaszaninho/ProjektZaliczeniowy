@@ -27,8 +27,8 @@
                     SelectedItem="{Binding WybraneStanowisko}"
                     FontSize="Medium" />
             <StackLayout Orientation="Horizontal">
-                <Button Text="Anuluj" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand" />
-                <Button Text="Zapisz" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Anuluj" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Zapisz" Command="{Binding SaveCommand}" Style="{StaticResource RedButton}" HorizontalOptions="FillAndExpand" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

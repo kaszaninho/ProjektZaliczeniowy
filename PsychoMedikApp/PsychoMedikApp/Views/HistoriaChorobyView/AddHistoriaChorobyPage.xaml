@@ -22,8 +22,8 @@
                     SelectedItem="{Binding WybranaChoroba}" 
                     FontSize="Medium" Margin="0" />
                 <StackLayout Orientation="Horizontal">
-                    <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
-                    <Button Text="Save" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
+                    <Button Text="Cancel" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand"></Button>
+                    <Button Text="Save" Command="{Binding SaveCommand}" Style="{StaticResource RedButton}" HorizontalOptions="FillAndExpand"></Button>
                 </StackLayout>
             </StackLayout>
         </StackLayout>
