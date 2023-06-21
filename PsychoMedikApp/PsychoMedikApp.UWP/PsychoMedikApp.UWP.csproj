@@ -113,9 +113,11 @@
     <Content Include="heart.png" />
     <Content Include="hospital.png" />
     <Content Include="joker.png" />
+    <Content Include="killer.png" />
     <Content Include="Logout.png" />
     <Content Include="nurse.png" />
     <Content Include="patient.png" />
+    <Content Include="poster.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />

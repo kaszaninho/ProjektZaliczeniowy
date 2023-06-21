@@ -187,4 +187,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\joker.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\killer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\poster.png" />
+  </ItemGroup>
 </Project>
