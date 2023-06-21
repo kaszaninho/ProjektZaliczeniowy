@@ -21,6 +21,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\HarmonogramView\NewHarmonogramPage.xaml.cs">
+      <DependentUpon>NewHarmonogramPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HarmonogramView\HarmonogramDetailsPage.xaml.cs">
+      <DependentUpon>HarmonogramDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HarmonogramView\HarmonogramPage.xaml.cs">
+      <DependentUpon>HarmonogramPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\HistoriaChorobyView\AddHistoriaChorobyPage.xaml.cs">
       <DependentUpon>AddHistoriaChorobyPage.xaml</DependentUpon>
     </Compile>

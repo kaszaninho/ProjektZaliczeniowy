@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PsychoMedikApp.Views.HarmonogramView.HarmonogramPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:PsychoMedikApp.ViewModels.HarmonogramVM"
+             xmlns:model="clr-namespace:PsychoMedik.Service.Reference"
+             x:Name="BrowseItemsPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Dodaj" Command="{Binding AddItemCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Margin="20" Padding="10">
+        <Label Text="Data początkowa:"
+                               LineBreakMode="NoWrap"
+                               Style="{DynamicResource ListItemTextStyle}"
+                               FontSize="12"/>
+        <DatePicker Date="{Binding DataPoczatkowa, Mode=TwoWay}" FontSize="Medium" />
+        <Label Text="Data końcowa:"
+                               LineBreakMode="NoWrap"
+                               Style="{DynamicResource ListItemTextStyle}"
+                               FontSize="12"/>
+        <DatePicker Date="{Binding DataKoncowa, Mode=TwoWay}" FontSize="Medium" />
+        <Picker Title="Wybierz pracownika"
+                    ItemsSource="{Binding Pracownicy}"
+                    ItemDisplayBinding="{Binding Imie}"
+                    SelectedItem="{Binding WybranyPracownik}"
+                    FontSize="Medium" />
+        <Button Text="Wylistuj" Command="{Binding WylistujCommand}" HorizontalOptions="FillAndExpand" />
+        <Grid Margin="20" Padding="2" VerticalOptions="Start">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" Text="Imię i Nazwisko Pracownika"
+                           LineBreakMode="NoWrap"
+                           Style="{DynamicResource ListItemTextStyle}"
+                           FontSize="12"/>
+            <Label Grid.Column="1" Text="Data pracy"
+                           LineBreakMode="NoWrap"
+                           Style="{DynamicResource ListItemTextStyle}"
+                           FontSize="12"/>
+            <Label Grid.Column="2" Text="Godzina rozpoczęcia"
+                           LineBreakMode="NoWrap"
+                           Style="{DynamicResource ListItemTextStyle}"
+                           FontSize="12"/>
+            <Label Grid.Column="3" Text="Godzina zakończenia"
+                           LineBreakMode="NoWrap"
+                           Style="{DynamicResource ListItemTextStyle}"
+                           FontSize="12"/>
+        </Grid>
+        <RefreshView Padding="20" x:DataType="local:HarmonogramViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+            <CollectionView x:Name="ItemsListView"
+                    ItemsSource="{Binding Items}"
+                    SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="{Binding ImieNazwiskoPracownika}"
+                           LineBreakMode="NoWrap"
+                           Style="{DynamicResource ListItemTextStyle}"
+                           FontSize="12"/>
+                            <Label Grid.Column="1" Text="{Binding DataPracy}"
+                           LineBreakMode="NoWrap"
+                           Style="{DynamicResource ListItemTextStyle}"
+                           FontSize="12"/>
+                            <Label Grid.Column="2" Text="{Binding GodzinaRozpoczecia}"
+                           LineBreakMode="NoWrap"
+                           Style="{DynamicResource ListItemTextStyle}"
+                           FontSize="12"/>
+                            <Label Grid.Column="3" Text="{Binding GodzinaZakonczenia}"
+                           LineBreakMode="NoWrap"
+                           Style="{DynamicResource ListItemTextStyle}"
+                           FontSize="12"/>
+
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer
+                            NumberOfTapsRequired="1"
+                            Command="{Binding Source={RelativeSource AncestorType={x:Type local:HarmonogramViewModel}}, Path=ItemTapped}"
+                            CommandParameter="{Binding .}">
+                                </TapGestureRecognizer>
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </StackLayout>
+
+</ContentPage>

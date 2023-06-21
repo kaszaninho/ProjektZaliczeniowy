@@ -8,6 +8,7 @@
        xmlns:localStanowisko="clr-namespace:PsychoMedikApp.Views.StanowiskoView"      
        xmlns:localPokoj="clr-namespace:PsychoMedikApp.Views.PokojView"      
        xmlns:localPacjent="clr-namespace:PsychoMedikApp.Views.PacjentView"      
+       xmlns:localHarmonogram="clr-namespace:PsychoMedikApp.Views.HarmonogramView"      
        Title="PsychoMedikApp"
        x:Class="PsychoMedikApp.AppShell">
 
@@ -104,6 +105,9 @@
     </FlyoutItem>
     <FlyoutItem Title="Pacjenci" Icon="patient.png">
         <ShellContent Route="PacjentPage" ContentTemplate="{DataTemplate localPacjent:PacjentPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Harmonogram" Icon="patient.png">
+        <ShellContent Route="HarmonogramPage" ContentTemplate="{DataTemplate localHarmonogram:HarmonogramPage}" />
     </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->

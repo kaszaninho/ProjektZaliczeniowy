@@ -1,6 +1,7 @@
 ﻿using PsychoMedikApp.ViewModels;
 using PsychoMedikApp.Views;
 using PsychoMedikApp.Views.ChorobaView;
+using PsychoMedikApp.Views.HarmonogramView;
 using PsychoMedikApp.Views.HistoriaChorobyView;
 using PsychoMedikApp.Views.ObjawView;
 using PsychoMedikApp.Views.PacjentView;
@@ -35,6 +36,8 @@ namespace PsychoMedikApp
             Routing.RegisterRoute(nameof(WizytaDetailsPage), typeof(WizytaDetailsPage));
             Routing.RegisterRoute(nameof(AddHistoriaChorobyPage), typeof(AddHistoriaChorobyPage));
             Routing.RegisterRoute(nameof(HistoriaChorobyDetailsPage), typeof(HistoriaChorobyDetailsPage));
+            Routing.RegisterRoute(nameof(HarmonogramDetailsPage), typeof(HarmonogramDetailsPage));
+            Routing.RegisterRoute(nameof(NewHarmonogramPage), typeof(NewHarmonogramPage));
             Routing.RegisterRoute("AboutPage", typeof(AboutPage));
         }
 

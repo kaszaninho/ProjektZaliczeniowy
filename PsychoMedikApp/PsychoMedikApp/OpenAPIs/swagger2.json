@@ -1748,17 +1748,20 @@
           "pracownik": {
             "$ref": "#/components/schemas/Pracownik"
           },
-          "dzienRoku": {
-            "type": "integer",
-            "format": "int32"
+          "dataPracy": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           },
           "godzinaRozpoczecia": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "godzinaZakonczenia": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1792,9 +1795,9 @@
             "type": "string",
             "nullable": true
           },
-          "dzienRoku": {
-            "type": "integer",
-            "format": "int32",
+          "dataPracy": {
+            "type": "string",
+            "format": "date-time",
             "nullable": true
           },
           "godzinaRozpoczecia": {
@@ -2231,6 +2234,10 @@
             "nullable": true
           },
           "nazwisko": {
+            "type": "string",
+            "nullable": true
+          },
+          "imieNazwisko": {
             "type": "string",
             "nullable": true
           },

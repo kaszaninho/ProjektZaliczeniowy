@@ -54,7 +54,7 @@ namespace PsychoMedikApp.ViewModels.PracownikVM
                 DataModyfikacji = DateTime.Now,
                 DataUtworzenia = DateTime.Now,
                 Opis = this.Opis,
-                NazwaStanowisko = wybraneStanowisko.Nazwa,
+                IdStanowiska = wybraneStanowisko.Id,
                 DataUrodzenia = this.DataUrodzenia,
                 DataRezygnacji = this.DataRezygnacji,
                 DataZatrudnienia = this.DataZatrudnienia
