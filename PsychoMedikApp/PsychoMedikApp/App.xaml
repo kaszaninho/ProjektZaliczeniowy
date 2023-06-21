@@ -14,10 +14,6 @@
                     <Setter Property="CornerRadius" Value="10" />
                     <Setter Property="Padding" Value="10" />
                     <Setter Property="Margin" Value="10" />
-                
-               
-
-           
 
                 <Setter Property="TextColor" Value="White"></Setter>
                 <Setter Property="VisualStateManager.VisualStateGroups">
@@ -55,8 +51,8 @@
             </Style>
             <Style x:Key="BlueLabelStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="#2A83A9" />
-                <Setter Property="FontAttributes" Value="Bold, Italic" />
-                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value=" Italic" />
+                <Setter Property="FontSize" Value="16" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

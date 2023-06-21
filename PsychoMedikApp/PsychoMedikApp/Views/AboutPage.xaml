@@ -27,7 +27,7 @@
 
                 <Label Text="PsychoMedikApp" FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center" />
                 <Label 
-                        Text="&#x0a;Odkryj najśmieszniejszą stronę życia. &#x0a;Bo jak mawia starożytna mądrość: śmiech to najlepsze lekarstwo. &#x0a;A z nami - jest to terapia na wyciągnięcie ręki!" 
+                        Text="&#x0a;Odkryj najśmieszniejszą stronę życia. &#x0a;Bo jak mawia starożytna mądrość: &#x0a;Pada sobie deszczyk, pada sobie równo.&#x0a; Raz spadnie na trawkę raz spadnie na g....... &#x0a;&#x0a;Z nami terapia na wyciągnięcie ręki!" 
                         FontSize="16" 
                         Padding="0,0,0,0"
                         HorizontalOptions="Center"

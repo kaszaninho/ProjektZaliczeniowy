@@ -9,7 +9,7 @@
             <Label Text="Data Wyleczenia" FontSize="Medium" />
             <DatePicker Date="{Binding DataWyleczenia, Mode=TwoWay}" FontSize="Medium" />
             <Label Text="Opis Choroby" FontSize="Medium" />
-            <Editor Text="{Binding Opis, Mode=TwoWay}" FontSize="Medium" />
+            <Editor Text="{Binding Opis, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
             <Picker Title="Wybierz Pracownika" 
                     ItemsSource="{Binding Pracownicy}" 
                     ItemDisplayBinding="{Binding Id}" 

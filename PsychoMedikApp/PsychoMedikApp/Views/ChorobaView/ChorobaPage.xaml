@@ -17,18 +17,19 @@
                         SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
+                    
                     <StackLayout Padding="10" x:DataType="model:Choroba">
-                        <Label Text="Nazwa Choroby"  Style="{StaticResource BlueLabelStyle}"/>
+                        <Label Text="Nazwa Choroby" FontAttributes="Bold" FontSize="Medium" />
                         <Label Text="{Binding Nazwa}"
                                LineBreakMode="NoWrap"
-                               Style="{DynamicResource ListItemTextStyle}"
-                               FontSize="16"/>
-                        <Label Text="Opis Choroby" Style="{StaticResource BlueLabelStyle}"/>
+                                Style="{StaticResource BlueLabelStyle}"
+                               />
+                        <Label Text="Opis Choroby" FontAttributes="Bold" FontSize="Medium"/>
 
                         <Label Text="{Binding Opis}&#x0a;"
                                LineBreakMode="NoWrap"
-                               Style="{DynamicResource ListItemTextStyle}"
-                               FontSize="16"/>
+                                Style="{StaticResource BlueLabelStyle}"
+                               />
                         <BoxView Color="Black" HeightRequest="1" HorizontalOptions="FillAndExpand" />
 
                         <StackLayout.GestureRecognizers>

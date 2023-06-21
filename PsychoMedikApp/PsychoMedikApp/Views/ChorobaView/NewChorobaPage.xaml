@@ -5,13 +5,11 @@
              Shell.PresentationMode="ModalAnimated"
              Title="Nowa Choroba">
     <ContentPage.Content>
-        
-        
-        
         <StackLayout Spacing="3" Padding="15" >
-            <Image Source="psycho.png" HorizontalOptions="Center" Aspect="AspectFit" />
-
-            <Label Text="Nazwa" FontSize="Medium" FontAttributes="Bold"/>
+            <Label Text="&#x0a;Nowa Choroba" FontSize="Medium" FontAttributes="Bold"
+                    HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Image Source="diabetes.png" WidthRequest="100" HeightRequest="50"></Image>
+            <Label Text="&#x0a;Nazwa" FontSize="Medium" FontAttributes="Bold"/>
             <Entry Text="{Binding Nazwa, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
             <Label Text="Opis" FontSize="Medium" FontAttributes="Bold"/>
             <Editor Text="{Binding Opis, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" AutoSize="TextChanges" FontSize="Medium" Margin="1"/>

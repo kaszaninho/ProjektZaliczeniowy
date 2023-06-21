@@ -6,10 +6,13 @@
              Title="Nowa Pokoj">
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
-            <Label Text="Nazwa" FontSize="Medium" />
-            <Entry Text="{Binding Nazwa, Mode=TwoWay}" FontSize="Medium" />
-            <Label Text="Opis" FontSize="Medium" />
-            <Editor Text="{Binding Opis, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="1"/>
+            <Label Text="&#x0a;Nowy Pokój" FontSize="Medium" FontAttributes="Bold"
+                    HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Image Source="nurse.png" WidthRequest="100" HeightRequest="50"></Image>
+            <Label Text="&#x0a;Nazwa"  FontSize="Medium" FontAttributes="Bold" />
+            <Entry Text="{Binding Nazwa, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
+            <Label Text="Opis"  FontSize="Medium" FontAttributes="Bold" />
+            <Editor Text="{Binding Opis, Mode=TwoWay}" AutoSize="TextChanges" Style="{StaticResource BlueLabelStyle}" FontSize="Medium"   Margin="1"/>
             <StackLayout Orientation="Horizontal">
                 <Button Text="Anuluj" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />
                 <Button Text="Zapisz" Command="{Binding SaveCommand}" Style="{StaticResource RedButton}" HorizontalOptions="FillAndExpand" />

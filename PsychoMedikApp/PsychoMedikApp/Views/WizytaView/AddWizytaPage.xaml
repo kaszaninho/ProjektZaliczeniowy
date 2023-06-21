@@ -1,24 +1,32 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PsychoMedikApp.Views.WizytaView.AddWizytaPage">
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
-            <Label Text="Data Wizyty" FontSize="Medium" />
-            <DatePicker Date="{Binding DataWizyty, Mode=TwoWay}" FontSize="Medium" />
-            <Label Text="Opis Wizyty" FontSize="Medium" />
+            <Label Text="&#x0a;Nowa Wizyta" FontSize="Medium" FontAttributes="Bold"
+                    HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Image Source="about.png" WidthRequest="100" HeightRequest="50"></Image>
+            <Label Text="&#x0a;Data Wizyty" FontSize="Medium" FontAttributes="Bold" />
+            <Frame CornerRadius="10" Padding="0" IsClippedToBounds="True">
+                <DatePicker Date="{Binding DataWizyty, Mode=TwoWay}" FontSize="Medium" />
+            </Frame>
+            <Label Text="Opis Wizyty" FontSize="Medium" FontAttributes="Bold" />
             <Editor Text="{Binding Opis, Mode=TwoWay}" FontSize="Medium" />
-            <Picker Title="Wybierz Pokój" 
-                    ItemsSource="{Binding Pokoje}" 
-                    ItemDisplayBinding="{Binding Id}" 
-                    SelectedItem="{Binding WybranyPokoj}" 
-                    FontSize="Medium" Margin="0" />
+            <Frame CornerRadius="10" Padding="0" IsClippedToBounds="True">
+                <Picker Title="Wybierz Pokój" 
+                        ItemsSource="{Binding Pokoje}" 
+                        ItemDisplayBinding="{Binding Id}" 
+                        SelectedItem="{Binding WybranyPokoj}" 
+                        FontSize="Medium" Margin="0" />
+            </Frame>
             <StackLayout Orientation="Horizontal">
-                <Picker Title="Wybierz Pacjenta" 
-                    ItemsSource="{Binding Pacjenci}" 
-                    ItemDisplayBinding="{Binding Imie}" 
-                    SelectedItem="{Binding WybranyPacjentData}" 
-                    FontSize="Medium" Margin="0" />
+                <Frame CornerRadius="10" Padding="0" IsClippedToBounds="True">
+                    <Picker Title="Wybierz Pacjenta" 
+                            ItemsSource="{Binding Pacjenci}" 
+                            ItemDisplayBinding="{Binding Imie}" 
+                            SelectedItem="{Binding WybranyPacjentData}" 
+                            FontSize="Medium" Margin="0" />
+                </Frame>
                 <StackLayout Orientation="Horizontal">
                     <Button Text="Cancel" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand"></Button>
                     <Button Text="Save" Command="{Binding SaveCommand}" Style="{StaticResource RedButton}" HorizontalOptions="FillAndExpand"></Button>

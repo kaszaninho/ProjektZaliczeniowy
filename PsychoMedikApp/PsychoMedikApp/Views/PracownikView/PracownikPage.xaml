@@ -18,18 +18,22 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout Padding="10" x:DataType="model:PracownikForView">
+                        <Label Text="Imię Pracownika" FontAttributes="Bold" FontSize="Medium" />
                         <Label Text="{Binding Imie}"
                                LineBreakMode="NoWrap"
-                               Style="{DynamicResource ListItemTextStyle}"
-                               FontSize="12"/>
+                               Style="{StaticResource BlueLabelStyle}" />
+                               
+                        <Label Text="Nazwisko Pracownika" FontAttributes="Bold" FontSize="Medium" />
                         <Label Text="{Binding Nazwisko}"
                                LineBreakMode="NoWrap"
-                               Style="{DynamicResource ListItemTextStyle}"
-                               FontSize="12"/>
+                              Style="{StaticResource BlueLabelStyle}" />
+                              
+                        <Label Text="Stanowisko" FontAttributes="Bold" FontSize="Medium" />
                         <Label Text="{Binding NazwaStanowisko}"
                                LineBreakMode="NoWrap"
-                               Style="{DynamicResource ListItemTextStyle}"
-                               FontSize="12"/>
+                              Style="{StaticResource BlueLabelStyle}" />
+                        <BoxView Color="Black" HeightRequest="1" HorizontalOptions="FillAndExpand" />
+
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer
                                 NumberOfTapsRequired="1"

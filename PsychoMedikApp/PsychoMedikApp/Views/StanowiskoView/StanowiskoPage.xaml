@@ -18,14 +18,17 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout Padding="10" x:DataType="model:Stanowisko">
+                        <Label Text="Nazwa Stanowiska" FontAttributes="Bold" FontSize="Medium" />
                         <Label Text="{Binding Nazwa}"
                                LineBreakMode="NoWrap"
-                               Style="{DynamicResource ListItemTextStyle}"
-                               FontSize="12"/>
+                              Style="{StaticResource BlueLabelStyle}" />
+                              
+                        <Label Text="Opis Stanowiska" FontAttributes="Bold" FontSize="Medium" />
                         <Label Text="{Binding Opis}"
                                LineBreakMode="NoWrap"
-                               Style="{DynamicResource ListItemTextStyle}"
-                               FontSize="12"/>
+                             Style="{StaticResource BlueLabelStyle}" />
+                        <BoxView Color="Black" HeightRequest="1" HorizontalOptions="FillAndExpand" />
+
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer
                                 NumberOfTapsRequired="1"
