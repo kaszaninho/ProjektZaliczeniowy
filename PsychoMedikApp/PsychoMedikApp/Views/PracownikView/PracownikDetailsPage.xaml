@@ -7,27 +7,27 @@
              Title="Szczegóły Pracownika">
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
-            <Label Text="&#x0a;Szczegóły Pracownika" FontSize="Medium" FontAttributes="Bold"
+            <Label Text="Szczegóły Pracownika" FontSize="Medium" FontAttributes="Bold"
                    HorizontalOptions="Center" VerticalOptions="Center"/>
-            <Image Source="doctor.png" WidthRequest="100" HeightRequest="50"></Image>
-            <Label Text="Nazwa" FontSize="Medium" FontAttributes="Bold" />
-            <Label Text="{Binding Imie}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
-            <Label Text="Opis" FontSize="Medium" FontAttributes="Bold" />
-            <Label Text="{Binding Nazwisko}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
-            <Label Text="Data urodzenia" FontSize="Medium" FontAttributes="Bold" />
-            <Label Text="{Binding DataUrodzenia}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
-            <Label Text="Data zatrudnienia" FontSize="Medium" FontAttributes="Bold" />
-            <Label Text="{Binding DataZatrudnienia}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
-            <Label Text="Data rezygnacji" FontSize="Medium" FontAttributes="Bold" />
-            <Label Text="{Binding DataModyfikacji}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
-            <Label Text="Stan cywilny" FontSize="Medium" FontAttributes="Bold" />
-            <Label Text="{Binding StanCywilny}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
-            <Label Text="Płeć" FontSize="Medium" FontAttributes="Bold" />
-            <Label Text="{Binding Plec}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
-            <Label Text="Data utworzenia" FontSize="Medium" FontAttributes="Bold" />
-            <Label Text="{Binding DataUtworzenia}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
-            <Label Text="Data modyfikacji" FontSize="Medium" FontAttributes="Bold" />
-            <Label Text="{Binding DataModyfikacji}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
+            <Image Source="doctor.png" WidthRequest="60" HeightRequest="25"></Image>
+            <Label Text="Nazwa" FontSize="18" FontAttributes="Bold" />
+            <Label Text="{Binding Imie}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="Opis" FontSize="18" FontAttributes="Bold" />
+            <Label Text="{Binding Nazwisko}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="Data urodzenia" FontSize="18" FontAttributes="Bold" />
+            <Label Text="{Binding DataUrodzenia}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="Data zatrudnienia" FontSize="18" FontAttributes="Bold" />
+            <Label Text="{Binding DataZatrudnienia}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="Data rezygnacji" FontSize="18" FontAttributes="Bold" />
+            <Label Text="{Binding DataModyfikacji}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="Stan cywilny" FontSize="18" FontAttributes="Bold" />
+            <Label Text="{Binding StanCywilny}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="Płeć" FontSize="18" FontAttributes="Bold" />
+            <Label Text="{Binding Plec}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="Data utworzenia" FontSize="18" FontAttributes="Bold" />
+            <Label Text="{Binding DataUtworzenia}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="Data modyfikacji" FontSize="18" FontAttributes="Bold" />
+            <Label Text="{Binding DataModyfikacji}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
             <RefreshView x:DataType="local:PracownikDetailsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
                 <CollectionView x:Name="PacjenciListView"
                                 ItemsSource="{Binding Wizyty}"
