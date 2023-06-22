@@ -5,6 +5,9 @@
              Title="Szczegóły Pacjenta">
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
+            <Label Text="&#x0a;Szczegóły Pacjenta" FontSize="Medium" FontAttributes="Bold"
+                                       HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Image Source="patient.png" WidthRequest="100" HeightRequest="50"></Image>
             <Label Text="Imię" FontSize="Medium" FontAttributes="Bold" />
             <Label Text="{Binding Imie}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
             <Label Text="Nazwisko" FontSize="Medium" FontAttributes="Bold" />
@@ -12,7 +15,7 @@
             <Label Text="Data urodzenia" FontSize="Medium" FontAttributes="Bold" />
             <Label Text="{Binding DataUrodzenia}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
             <Label Text="Lekarz prowadzący" FontSize="Medium" FontAttributes="Bold" />
-            <Label Text="{Binding ImieNazwiskoPracownikaProwadzacego}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
+            <Label Text="{Binding ImieNazwisko}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
             <Label Text="Płeć" FontSize="Medium" FontAttributes="Bold" />
             <Label Text="{Binding Plec}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
             <Label Text="Data utworzenia" FontSize="Medium" FontAttributes="Bold" />
@@ -26,9 +29,8 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout Padding="10" x:DataType="model:HistoriaChorobyForView">
-                                <Label Text="&#x0a;Szczegóły Pajenta" FontSize="Medium" FontAttributes="Bold"
+                                <Label Text="&#x0a;Choroby" FontSize="Medium" FontAttributes="Bold"
                                        HorizontalOptions="Center" VerticalOptions="Center"/>
-                                <Image Source="patient.png" WidthRequest="100" HeightRequest="50"></Image>
                                 <Label Text="{Binding Id}" 
                                     LineBreakMode="NoWrap" 
                                     Style="{DynamicResource ListItemTextStyle}"

@@ -24,7 +24,7 @@
         <DatePicker Date="{Binding DataKoncowa, Mode=TwoWay}" FontSize="Medium" />
         <Picker Title="Wybierz pracownika"
                     ItemsSource="{Binding Pracownicy}"
-                    ItemDisplayBinding="{Binding Imie}"
+                    ItemDisplayBinding="{Binding ImieNazwisko}"
                     SelectedItem="{Binding WybranyPracownik}"
                     FontSize="Medium" />
         <Button Text="Wylistuj" Command="{Binding WylistujCommand}" HorizontalOptions="FillAndExpand" />
@@ -53,7 +53,7 @@
                            Style="{DynamicResource ListItemTextStyle}"
                            FontSize="12"/>
         </Grid>
-        <RefreshView Padding="20" x:DataType="local:HarmonogramViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <RefreshView Padding="20" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
             <CollectionView x:Name="ItemsListView"
                     ItemsSource="{Binding Items}"
                     SelectionMode="None">

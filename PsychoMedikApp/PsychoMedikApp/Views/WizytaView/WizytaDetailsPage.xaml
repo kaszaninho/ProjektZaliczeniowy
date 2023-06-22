@@ -9,10 +9,10 @@
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
              <Label Text="Lekarz:" FontAttributes="Bold" FontSize="Medium" />
-            <Label Text="{Binding ImieNazwiskoPracownika}" Style="{StaticResource BlueLabelStyle}" />
+            <Label Text="{Binding ImieNazwisko}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="{Binding IdPracownika}" Style="{StaticResource BlueLabelStyle}" />
              <Label Text="Pacjent" FontAttributes="Bold" FontSize="Medium" />
-            <Label Text="{Binding ImieNazwiskoPacjenta}" Style="{StaticResource BlueLabelStyle}" />
+            <Label Text="{Binding ImieNazwisko}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="{Binding IdPacjenta}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="Pokój"  FontAttributes="Bold" FontSize="Medium" />
             <Label Text="{Binding IdPokoju}" Style="{StaticResource BlueLabelStyle}" />

@@ -10,37 +10,41 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Dodaj" Command="{Binding AddItemCommand}" />
     </ContentPage.ToolbarItems>
-
-    <RefreshView x:DataType="local:PokojViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
-        <CollectionView x:Name="ItemsListView"
+    <StackLayout Spacing="3" Padding="15">
+        <Label Text="Pokoje" FontSize="Medium" FontAttributes="Bold"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+        <Image Source="killer.png" WidthRequest="140" HeightRequest="70"></Image>
+        <RefreshView x:DataType="local:PokojViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+            <CollectionView x:Name="ItemsListView"
                         ItemsSource="{Binding Items}"
                         SelectionMode="None">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout Padding="10" x:DataType="model:Pokoj">
-                        <Label Text="Nazwa Pokoju" FontAttributes="Bold" FontSize="Medium" />
-                        <Label Text="{Binding Nazwa}"
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10" x:DataType="model:Pokoj">
+                            <Label Text="Nazwa Pokoju" FontAttributes="Bold" FontSize="Medium" />
+                            <Label Text="{Binding Nazwa}"
                                LineBreakMode="NoWrap"
                               Style="{StaticResource BlueLabelStyle}" />
-                                
-                        <Label Text="Opis Pokoju" FontAttributes="Bold" FontSize="Medium" />
-                        <Label Text="{Binding Opis}"
-                               LineBreakMode="NoWrap"
-                              Style="{StaticResource BlueLabelStyle}" />
-                        <BoxView Color="Black" HeightRequest="1" HorizontalOptions="FillAndExpand" />
 
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer
+                            <Label Text="Opis Pokoju" FontAttributes="Bold" FontSize="Medium" />
+                            <Label Text="{Binding Opis}"
+                               LineBreakMode="NoWrap"
+                              Style="{StaticResource BlueLabelStyle}" />
+                            <BoxView Color="Black" HeightRequest="1" HorizontalOptions="FillAndExpand" />
+
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer
                                 NumberOfTapsRequired="1"
                                 Command="{Binding Source={RelativeSource AncestorType={x:Type local:PokojViewModel}}, Path=ItemTapped}"
                                 CommandParameter="{Binding .}">
-                            </TapGestureRecognizer>
-                        </StackLayout.GestureRecognizers>
-                    </StackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </RefreshView>
+                                </TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </StackLayout>
 
 
 </ContentPage>

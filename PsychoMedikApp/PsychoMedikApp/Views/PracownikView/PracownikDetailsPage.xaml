@@ -24,6 +24,8 @@
             <Label Text="{Binding StanCywilny}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
             <Label Text="Płeć" FontSize="18" FontAttributes="Bold" />
             <Label Text="{Binding Plec}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="Stanowisko" FontSize="18" FontAttributes="Bold" />
+            <Label Text="{Binding NazwaStanowisko}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
             <Label Text="Data utworzenia" FontSize="18" FontAttributes="Bold" />
             <Label Text="{Binding DataUtworzenia}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
             <Label Text="Data modyfikacji" FontSize="18" FontAttributes="Bold" />

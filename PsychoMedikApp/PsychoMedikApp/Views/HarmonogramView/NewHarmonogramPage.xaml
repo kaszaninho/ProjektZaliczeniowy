@@ -3,13 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PsychoMedikApp.Views.HarmonogramView.NewHarmonogramPage"
              Shell.PresentationMode="ModalAnimated"
-             Title="Nowa Harmonogram">
+             Title="Nowy Harmonogram">
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
             <Label Text="Data Pracy" FontSize="Medium" />
             <DatePicker Date="{Binding DataPracy, Mode=TwoWay}" FontSize="Medium" />
             <Label Text="Pracownik" FontSize="Medium" />
-            <Picker ItemDisplayBinding="{Binding Imie}" SelectedItem="{Binding WybranyPracownik, Mode=TwoWay}" ItemsSource="{Binding Pracownicy}" FontSize="Medium" />
+            <Picker ItemDisplayBinding="{Binding ImieNazwisko}" SelectedItem="{Binding WybranyPracownik, Mode=TwoWay}" ItemsSource="{Binding Pracownicy}" FontSize="Medium" />
             <Label Text="Godzina Rozpoczęcia" FontSize="Medium" />
             <Editor Text="{Binding GodzinaRozpoczecia, Mode=TwoWay}" FontSize="Medium" />
             <Label Text="Godzina zakończenia" FontSize="Medium" />

@@ -12,7 +12,7 @@
             <Editor Text="{Binding Opis, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
             <Picker Title="Wybierz Pracownika" 
                     ItemsSource="{Binding Pracownicy}" 
-                    ItemDisplayBinding="{Binding Id}" 
+                    ItemDisplayBinding="{Binding ImieNazwisko}" 
                     SelectedItem="{Binding WybranyPracownikData}" 
                     FontSize="Medium" Margin="0" />
             <StackLayout Orientation="Horizontal">

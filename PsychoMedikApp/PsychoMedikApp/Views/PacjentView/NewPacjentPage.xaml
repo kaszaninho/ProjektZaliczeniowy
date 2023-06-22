@@ -17,7 +17,7 @@
             <DatePicker Date="{Binding DataUrodzenia, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
             <Picker Title="Wybierz lekarza prowadzącego"
                     ItemsSource="{Binding Pracownicy}"
-                    ItemDisplayBinding="{Binding Imie}"
+                    ItemDisplayBinding="{Binding ImieNazwisko}"
                     SelectedItem="{Binding WybranyPracownik}"
                     FontSize="Medium" />
             <RadioButton Content="Mężczyzna" IsChecked="{Binding Plec}"/>

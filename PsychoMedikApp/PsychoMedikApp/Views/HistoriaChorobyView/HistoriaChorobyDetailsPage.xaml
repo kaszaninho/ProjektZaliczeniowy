@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PsychoMedikApp.Views.HistoriaChorobyView.HistoriaChorobyDetailsPage"
-             Title="Szczegóły Wizyty">
+             Title="Szczegóły Choroby">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Menu Główne" Command="{Binding MenuCommand}"/>
     </ContentPage.ToolbarItems>
@@ -12,10 +12,10 @@
                    HorizontalOptions="Center" VerticalOptions="Center"/>
             <Image Source="dizzy.png" WidthRequest="100" HeightRequest="50"></Image>
             <Label Text="Pacjent" FontAttributes="Bold" FontSize="Medium" />
-            <Label Text="{Binding ImieNazwiskoPacjenta}"  Style="{StaticResource BlueLabelStyle}" />
+            <Label Text="{Binding ImieNazwisko}"  Style="{StaticResource BlueLabelStyle}" />
             <Label Text="{Binding IdPacjenta}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="Lekarz"  FontAttributes="Bold" FontSize="Medium" />
-            <Label Text="{Binding ImieNazwiskoPracownika}" Style="{StaticResource BlueLabelStyle}" />
+            <Label Text="{Binding ImieNazwisko}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="{Binding IdPracownika}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="Choroba"  FontAttributes="Bold" FontSize="Medium" />
             <Label Text="{Binding IdChoroby}" Style="{StaticResource BlueLabelStyle}" />

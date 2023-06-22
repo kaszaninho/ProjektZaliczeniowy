@@ -30,8 +30,8 @@ namespace PsychoMedikApp.ViewModels.PracownikVM
         private int id;
         private string imie;
         private string nazwisko;
-        private string dataUrodzenia;
-        private string dataZatrudnienia;
+        private DateTime? dataUrodzenia;
+        private DateTime? dataZatrudnienia;
         private DateTime? dataRezygnacji;
         private string plec;
         private string stanCywilny;
@@ -48,8 +48,8 @@ namespace PsychoMedikApp.ViewModels.PracownikVM
         public string Imie { get => imie; set => SetProperty(ref imie, value); }
         public string Nazwisko { get => nazwisko; set => SetProperty(ref nazwisko, value); }
         public string StanCywilny { get => stanCywilny; set => SetProperty(ref stanCywilny, value); }
-        public string DataUrodzenia { get => dataUrodzenia; set => SetProperty(ref dataUrodzenia, value); }
-        public string DataZatrudnienia { get => dataZatrudnienia; set => SetProperty(ref dataZatrudnienia, value); }
+        public DateTime? DataUrodzenia { get => dataUrodzenia; set => SetProperty(ref dataUrodzenia, value); }
+        public DateTime? DataZatrudnienia { get => dataZatrudnienia; set => SetProperty(ref dataZatrudnienia, value); }
         public DateTime? DataRezygnacji { get => dataRezygnacji; set => SetProperty(ref dataRezygnacji, value); }
         public string Plec { get => plec; set => SetProperty(ref plec, value); }
         public string NazwaStanowisko { get => nazwaStanowisko; set => SetProperty(ref nazwaStanowisko, value); }
@@ -68,8 +68,8 @@ namespace PsychoMedikApp.ViewModels.PracownikVM
             StanCywilny = item.StanCywilny;
             Plec = (item.Plec == true) ? "Mężczyzna" : "Kobieta";
             NazwaStanowisko = item.NazwaStanowisko;
-            DataUrodzenia = item.DataUrodzenia.ToString();
-            DataZatrudnienia = item.DataZatrudnienia.ToString();
+            DataUrodzenia = item.DataUrodzenia.Date;
+            DataZatrudnienia = item.DataZatrudnienia.Date;
             this.CopyProperties(item);
             await ExecuteLoadItemsCommand();
             //DataRezygnacji = item.DataRezygnacji;

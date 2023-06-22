@@ -11,7 +11,7 @@ namespace PsychoMedikApp.ViewModels.PokojVM
     public class PokojViewModel : AListViewModel<Pokoj>
     {
         public PokojViewModel()
-            : base("Pokojy")
+            : base("Pokoje")
         {
         }
 

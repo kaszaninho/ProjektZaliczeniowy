@@ -11,41 +11,45 @@
         <ToolbarItem Text="Dodaj" Command="{Binding AddItemCommand}" />
     </ContentPage.ToolbarItems>
 
-    <RefreshView x:DataType="local:PracownikViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
-        <CollectionView x:Name="ItemsListView"
+    <StackLayout>
+        <Label Text="&#x0a;Pracownicy" FontSize="Medium" FontAttributes="Bold"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+        <Image Source="doctor.png" WidthRequest="100" HeightRequest="50"></Image>
+        <RefreshView x:DataType="local:PracownikViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+            <CollectionView x:Name="ItemsListView"
                         ItemsSource="{Binding Items}"
                         SelectionMode="None">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout Padding="10" x:DataType="model:PracownikForView">
-                        <Label Text="Imię Pracownika" FontAttributes="Bold" FontSize="Medium" />
-                        <Label Text="{Binding Imie}"
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10" x:DataType="model:PracownikForView">
+                            <Label Text="Imię Pracownika" FontAttributes="Bold" FontSize="Medium" />
+                            <Label Text="{Binding Imie}"
                                LineBreakMode="NoWrap"
                                Style="{StaticResource BlueLabelStyle}" />
-                               
-                        <Label Text="Nazwisko Pracownika" FontAttributes="Bold" FontSize="Medium" />
-                        <Label Text="{Binding Nazwisko}"
-                               LineBreakMode="NoWrap"
-                              Style="{StaticResource BlueLabelStyle}" />
-                              
-                        <Label Text="Stanowisko" FontAttributes="Bold" FontSize="Medium" />
-                        <Label Text="{Binding NazwaStanowisko}"
-                               LineBreakMode="NoWrap"
-                              Style="{StaticResource BlueLabelStyle}" />
-                        <BoxView Color="Black" HeightRequest="1" HorizontalOptions="FillAndExpand" />
 
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer
+                            <Label Text="Nazwisko Pracownika" FontAttributes="Bold" FontSize="Medium" />
+                            <Label Text="{Binding Nazwisko}"
+                               LineBreakMode="NoWrap"
+                              Style="{StaticResource BlueLabelStyle}" />
+
+                            <Label Text="Stanowisko" FontAttributes="Bold" FontSize="Medium" />
+                            <Label Text="{Binding NazwaStanowisko}"
+                               LineBreakMode="NoWrap"
+                              Style="{StaticResource BlueLabelStyle}" />
+                            <BoxView Color="Black" HeightRequest="1" HorizontalOptions="FillAndExpand" />
+
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer
                                 NumberOfTapsRequired="1"
                                 Command="{Binding Source={RelativeSource AncestorType={x:Type local:PracownikViewModel}}, Path=ItemTapped}"
                                 CommandParameter="{Binding .}">
-                            </TapGestureRecognizer>
-                        </StackLayout.GestureRecognizers>
-                    </StackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </RefreshView>
-
+                                </TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </StackLayout>
 
 </ContentPage>

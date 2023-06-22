@@ -57,7 +57,8 @@ namespace PsychoMedikApp.ViewModels.PracownikVM
                 IdStanowiska = wybraneStanowisko.Id,
                 DataUrodzenia = this.DataUrodzenia,
                 DataRezygnacji = this.DataRezygnacji,
-                DataZatrudnienia = this.DataZatrudnienia
+                DataZatrudnienia = this.DataZatrudnienia,
+                ImieNazwisko = this.Imie + " " + this.Nazwisko                
             }.CopyProperties(this);
         }
 

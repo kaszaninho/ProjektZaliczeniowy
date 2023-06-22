@@ -10,38 +10,42 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Dodaj" Command="{Binding AddItemCommand}" />
     </ContentPage.ToolbarItems>
-
-    <RefreshView x:DataType="local:ObjawViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
-        <CollectionView x:Name="ItemsListView"
+    <StackLayout>
+        <Label Text="&#x0a;Objawy" FontSize="Medium" FontAttributes="Bold"
+                   HorizontalOptions="Center" VerticalOptions="Center"/>
+        <Image Source="coronavirus.png" WidthRequest="100" HeightRequest="50"></Image>
+        <RefreshView x:DataType="local:ObjawViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+            <CollectionView x:Name="ItemsListView"
                         ItemsSource="{Binding Items}"
                         SelectionMode="None">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout Padding="10" x:DataType="model:Objaw">
-                        <Label Text="Nazwa " FontAttributes="Bold" FontSize="Medium" />
-                        <Label Text="{Binding Nazwa}"
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10" x:DataType="model:Objaw">
+                            <Label Text="Nazwa " Style="{StaticResource WhiteLabelStyle}"/>
+                            <Label Text="{Binding Nazwa}"
                                LineBreakMode="NoWrap"
                                 Style="{StaticResource BlueLabelStyle}"
                                 />
-                        <Label Text="Opis" FontAttributes="Bold" FontSize="Medium" />
-                        <Label Text="{Binding Opis}"
+                            <Label Text="Opis" Style="{StaticResource WhiteLabelStyle}" />
+                            <Label Text="{Binding Opis}"
                                LineBreakMode="NoWrap"
                                  Style="{StaticResource BlueLabelStyle}"
                                 />
-                        <BoxView Color="Black" HeightRequest="1" HorizontalOptions="FillAndExpand" />
+                            <BoxView Color="Azure" HeightRequest="1" HorizontalOptions="FillAndExpand" />
 
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer
                                 NumberOfTapsRequired="1"
                                 Command="{Binding Source={RelativeSource AncestorType={x:Type local:ObjawViewModel}}, Path=ItemTapped}"
                                 CommandParameter="{Binding .}">
-                            </TapGestureRecognizer>
-                        </StackLayout.GestureRecognizers>
-                    </StackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </RefreshView>
+                                </TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </StackLayout>
 
 
 </ContentPage>
