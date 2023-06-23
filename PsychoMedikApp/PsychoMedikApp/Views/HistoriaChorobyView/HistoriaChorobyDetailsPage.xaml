@@ -12,19 +12,19 @@
                    HorizontalOptions="Center" VerticalOptions="Center"/>
             <Image Source="dizzy.png" WidthRequest="100" HeightRequest="50"></Image>
             <Label Text="Pacjent" FontAttributes="Bold" FontSize="Medium" />
-            <Label Text="{Binding ImieNazwisko}"  Style="{StaticResource BlueLabelStyle}" />
+            <Label Text="{Binding ImieNazwiskoPacjenta}"  Style="{StaticResource BlueLabelStyle}" />
             <Label Text="{Binding IdPacjenta}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="Lekarz"  FontAttributes="Bold" FontSize="Medium" />
-            <Label Text="{Binding ImieNazwisko}" Style="{StaticResource BlueLabelStyle}" />
+            <Label Text="{Binding ImieNazwiskoPracownika}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="{Binding IdPracownika}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="Choroba"  FontAttributes="Bold" FontSize="Medium" />
             <Label Text="{Binding IdChoroby}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="Opis" FontAttributes="Bold" FontSize="Medium" />
             <Label Text="{Binding Opis}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="Data zdiagnozowania"  FontAttributes="Bold" FontSize="Medium" />
-            <Label Text="{Binding DataZdiagnozowania}" Style="{StaticResource BlueLabelStyle}" />
+            <Label Text="{Binding DataZdiagnozowania, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="Data wyleczenia"  FontAttributes="Bold" FontSize="Medium" />
-            <Label Text="{Binding DataWyleczenia}" Style="{StaticResource BlueLabelStyle}" />
+            <Label Text="{Binding DataWyleczenia, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="Data utworzenia"  FontAttributes="Bold" FontSize="Medium" />
             <Label Text="{Binding DataUtworzenia}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="Data modyfikacji"  FontAttributes="Bold" FontSize="Medium" />

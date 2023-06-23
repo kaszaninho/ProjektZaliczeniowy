@@ -60,6 +60,7 @@ namespace PsychoMedikApp.ViewModels.HistoriaChorobyVM
             DataModyfikacji = item.DataModyfikacji?.DateTime ?? DateTime.Now;
             DataWyleczenia = item.DataWyleczenia?.DateTime ?? DateTime.Now;
             DataUtworzenia = item.DataUtworzenia?.DateTime ?? DateTime.Now;
+            Opis = item.Opis;
         }
     }
 }

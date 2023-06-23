@@ -15,11 +15,11 @@
             <Label Text="Opis" FontSize="18" FontAttributes="Bold" />
             <Label Text="{Binding Nazwisko}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
             <Label Text="Data urodzenia" FontSize="18" FontAttributes="Bold" />
-            <Label Text="{Binding DataUrodzenia}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="{Binding DataUrodzenia, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
             <Label Text="Data zatrudnienia" FontSize="18" FontAttributes="Bold" />
-            <Label Text="{Binding DataZatrudnienia}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="{Binding DataZatrudnienia, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
             <Label Text="Data rezygnacji" FontSize="18" FontAttributes="Bold" />
-            <Label Text="{Binding DataModyfikacji}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="{Binding DataRezygnacji, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
             <Label Text="Stan cywilny" FontSize="18" FontAttributes="Bold" />
             <Label Text="{Binding StanCywilny}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
             <Label Text="Płeć" FontSize="18" FontAttributes="Bold" />

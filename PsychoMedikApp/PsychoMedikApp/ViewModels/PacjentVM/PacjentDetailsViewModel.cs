@@ -23,7 +23,7 @@ namespace PsychoMedikApp.ViewModels.PacjentVM
             : base("Pacjent")
         {
             HistorieChoroby = new ObservableCollection<HistoriaChorobyForView>();
-            AddHistoriaChorobyCommand = new Command(async () => await Shell.Current.GoToAsync($"{nameof(AddHistoriaChorobyPage)}?{nameof(AddHistoriaChorobyViewModel.IdPacjenta)}={Id}"));
+            AddHistoriaChorobyCommand = new Command(async () => await Shell.Current.GoToAsync($"{nameof(AddHistoriaChorobyPage)}?{nameof(AddHistoriaChorobyViewModel.IdPacjenta)}={ItemId}"));
         }
 
         #region Pola

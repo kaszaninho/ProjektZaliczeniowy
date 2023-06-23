@@ -61,7 +61,7 @@ namespace PsychoMedikApp.ViewModels
                 DataUtworzenia = DateTime.Now,
                 IdPokoju = WybranyPokoj.Id,
                 IdPacjenta = WybranyPacjentData.Id,
-                IdPracownika = IdPracownika,
+                IdPracownika = this.IdPracownika,
                 DataWizyty = DataWizyty,
                 Opis = Opis,                
             }.CopyProperties(this);

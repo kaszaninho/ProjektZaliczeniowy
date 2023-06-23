@@ -53,7 +53,7 @@ namespace PsychoMedikApp.UWP
             if (rootFrame == null)
             {
                 // Create a Frame to act as the navigation context and navigate to the first page
-                rootFrame = new Frame();
+                rootFrame = new Frame(); 
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
                 global::Xamarin.Forms.Forms.SetFlags("Shell_UWP_Experimental");
@@ -68,6 +68,7 @@ namespace PsychoMedikApp.UWP
                 Window.Current.Content = rootFrame;
             }
 
+            Xamarin.Forms.Forms.Init(e);
             if (rootFrame.Content == null)
             {
                 // When the navigation stack isn't restored navigate to the first page,
@@ -75,6 +76,7 @@ namespace PsychoMedikApp.UWP
                 // parameter
                 rootFrame.Navigate(typeof(MainPage), e.Arguments);
             }
+            rootFrame.Background = (SolidColorBrush)Application.Current.Resources["AppBackgroundColor"];
             // Ensure the current window is active
             Window.Current.Activate();
         }

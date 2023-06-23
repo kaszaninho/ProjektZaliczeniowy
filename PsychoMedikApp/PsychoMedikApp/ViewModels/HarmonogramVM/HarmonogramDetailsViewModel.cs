@@ -32,13 +32,13 @@ namespace PsychoMedikApp.ViewModels.HarmonogramVM
         #endregion
 
 
-        public override async void LoadProperties(HarmonogramForView item)
+        public override void LoadProperties(HarmonogramForView item)
         {
             DataModyfikacji = item.DataModyfikacji?.DateTime ?? DateTime.Now;
             DataUtworzenia = item.DataUtworzenia?.DateTime ?? DateTime.Now;
             DataPracy = item.DataPracy?.DateTime ?? DateTime.Now;
-            GodzinaRozpoczecia = item.GodzinaRozpoczecia ?? 0;
-            GodzinaZakonczenia = item.GodzinaZakonczenia ?? 0;
+            GodzinaRozpoczecia = item.GodzinaRozpoczecia;
+            GodzinaZakonczenia = item.GodzinaZakonczenia;
             ImieNazwiskoPracownika = item.ImieNazwiskoPracownika ?? "";
             this.CopyProperties(item);
         }

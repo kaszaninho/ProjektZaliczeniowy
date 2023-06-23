@@ -13,7 +13,7 @@
             <Picker Title="Wybierz Pracownika" 
                     ItemsSource="{Binding Pracownicy}" 
                     ItemDisplayBinding="{Binding ImieNazwisko}" 
-                    SelectedItem="{Binding WybranyPracownikData}" 
+                    SelectedItem="{Binding WybranyPracownik}" 
                     FontSize="Medium" Margin="0" />
             <StackLayout Orientation="Horizontal">
                 <Picker Title="Wybierz chorobę" 

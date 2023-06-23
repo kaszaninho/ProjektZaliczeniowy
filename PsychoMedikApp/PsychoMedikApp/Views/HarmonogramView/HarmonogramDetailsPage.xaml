@@ -8,12 +8,12 @@
             <Label Text="Imię i nazwisko pracownika" FontSize="Medium" />
             <Label Text="{Binding ImieNazwiskoPracownika}" FontSize="Medium" />
             <Label Text="Data pracy" FontSize="Medium" />
-            <Label Text="{Binding DataPracy}" FontSize="Medium" />
+            <Label Text="{Binding DataPracy, StringFormat='{}{0:dd.MM.yyyy}'}" FontSize="Medium" />
             <StackLayout Orientation="Horizontal">
                 <Label Text="Od: " FontSize="Medium" />
-                <Label Text="{Binding GodzinaRozpoczecia}" FontSize="Medium" />
+                <Label Text="{Binding GodzinaRozpoczecia, StringFormat='{}{0:00}:00'}" FontSize="Medium" />
                 <Label Text="Do:  " FontSize="Medium" />
-                <Label Text="{Binding GodzinaZakonczenia}" FontSize="Medium" />
+                <Label Text="{Binding GodzinaZakonczenia, StringFormat='{}{0:00}:00'}" FontSize="Medium" />
             </StackLayout>
             <Label Text="Data utworzenia" FontSize="Medium" />
             <Label Text="{Binding DataUtworzenia}" FontSize="Medium" />

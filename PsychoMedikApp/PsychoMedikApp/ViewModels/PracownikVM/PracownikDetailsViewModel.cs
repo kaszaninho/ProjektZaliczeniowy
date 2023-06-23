@@ -23,7 +23,7 @@ namespace PsychoMedikApp.ViewModels.PracownikVM
             : base("Pracownik")
         {
             Wizyty = new ObservableCollection<WizytaForView>();
-            AddWizytaCommand = new Command(async () => await Shell.Current.GoToAsync($"{nameof(AddWizytaPage)}?{nameof(AddWizytaViewModel.IdPracownika)}={Id}"));
+            AddWizytaCommand = new Command(async () => await Shell.Current.GoToAsync($"{nameof(AddWizytaPage)}?{nameof(AddWizytaViewModel.IdPracownika)}={ItemId}"));
         }
 
         #region Pola

@@ -15,7 +15,7 @@ namespace PsychoMedikApp.ViewModels
         public AddHistoriaChorobyViewModel()
             : base()
         {
-            wybranyPracownikData = new PracownikForView();
+            wybranyPracownik = new PracownikForView();
             wybranaChoroba = new Choroba();
 
             var pracownikForViewDataStore = new PracownikDataStore();
@@ -30,7 +30,7 @@ namespace PsychoMedikApp.ViewModels
         private int idPacjenta;
         private DateTime? dataZdiagnozowania;
         private DateTime? dataWyleczenia;
-        private PracownikForView wybranyPracownikData;
+        private PracownikForView wybranyPracownik;
         private List<PracownikForView> pracownicy;
         private Choroba wybranaChoroba;
         private string opis;
@@ -40,7 +40,7 @@ namespace PsychoMedikApp.ViewModels
         public int IdPacjenta { get => idPacjenta; set => SetProperty(ref idPacjenta, value); }
         public DateTime? DataZdiagnozowania { get => dataZdiagnozowania; set => SetProperty(ref dataZdiagnozowania, value); }
         public DateTime? DataWyleczenia { get => dataWyleczenia; set => SetProperty(ref dataWyleczenia, value); }
-        public PracownikForView WybranyPracownikData { get => wybranyPracownikData; set => SetProperty(ref wybranyPracownikData, value); }
+        public PracownikForView WybranyPracownik { get => wybranyPracownik; set => SetProperty(ref wybranyPracownik, value); }
         public List<PracownikForView> Pracownicy
         {
             get
@@ -64,8 +64,8 @@ namespace PsychoMedikApp.ViewModels
                 DataWyleczenia = this.DataWyleczenia,
                 DataZdiagnozowania = this.DataZdiagnozowania,
                 IdChoroby = WybranaChoroba.Id,
-                IdPacjenta = IdPacjenta,
-                IdPracownika = WybranyPracownikData.Id,
+                IdPacjenta = this.IdPacjenta,
+                IdPracownika = WybranyPracownik.Id,
                 Opis = Opis,
                 NazwaChoroby = WybranaChoroba.Nazwa,               
             }.CopyProperties(this);

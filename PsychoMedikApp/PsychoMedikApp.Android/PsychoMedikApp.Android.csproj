@@ -165,8 +165,5 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\killer.png" />
   </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\poster.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
