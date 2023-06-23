@@ -12,22 +12,24 @@
     </ContentPage.ToolbarItems>
 
     <StackLayout Margin="20" Padding="10">
+        <Label Text="&#x0a;Harmonogram" Style="{StaticResource LogoLabelStyle}"/>
+        <Image Source="schedule.png" WidthRequest="100" HeightRequest="50"></Image>
         <Label Text="Data początkowa:"
                                LineBreakMode="NoWrap"
-                               Style="{DynamicResource ListItemTextStyle}"
+                               Style="{DynamicResource CrimsonLabelStyle}"
                                FontSize="12"/>
-        <DatePicker Date="{Binding DataPoczatkowa, Mode=TwoWay}" FontSize="Medium" />
+        <DatePicker Date="{Binding DataPoczatkowa, Mode=TwoWay}"  Style="{StaticResource BlueLabelStyle}"/>
         <Label Text="Data końcowa:"
                                LineBreakMode="NoWrap"
-                               Style="{DynamicResource ListItemTextStyle}"
+                               Style="{DynamicResource CrimsonLabelStyle}"
                                FontSize="12"/>
-        <DatePicker Date="{Binding DataKoncowa, Mode=TwoWay}" FontSize="Medium" />
+        <DatePicker Date="{Binding DataKoncowa, Mode=TwoWay}"  Style="{StaticResource BlueLabelStyle}"/>
         <Picker Title="Wybierz pracownika"
                     ItemsSource="{Binding Pracownicy}"
                     ItemDisplayBinding="{Binding ImieNazwisko}"
                     SelectedItem="{Binding WybranyPracownik}"
-                    FontSize="Medium" />
-        <Button Text="Wylistuj" Command="{Binding WylistujCommand}" HorizontalOptions="FillAndExpand" />
+                     Style="{StaticResource CrimsonLabelStyle}"/>
+        <Button Text="Wylistuj" Command="{Binding WylistujCommand}" HorizontalOptions="FillAndExpand" Style="{StaticResource BlueButton}"/>
         <Grid Margin="20" Padding="2" VerticalOptions="Start">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*" />
@@ -38,15 +40,15 @@
 
             <Label Grid.Column="0" Text="Imię i Nazwisko Pracownika"
                            LineBreakMode="NoWrap"
-                           Style="{DynamicResource ListItemTextStyle}"
+                           Style="{DynamicResource BlueLabelStyle}"
                            FontSize="12"/>
             <Label Grid.Column="1" Text="Data pracy"
                            LineBreakMode="NoWrap"
-                           Style="{DynamicResource ListItemTextStyle}"
+                           Style="{DynamicResource BlueLabelStyle}"
                            FontSize="12"/>
             <Label Grid.Column="2" Text="Godzina rozpoczęcia"
                            LineBreakMode="NoWrap"
-                           Style="{DynamicResource ListItemTextStyle}"
+                           Style="{DynamicResource BlueLabelStyle}"
                            FontSize="12"/>
             <Label Grid.Column="3" Text="Godzina zakończenia"
                            LineBreakMode="NoWrap"

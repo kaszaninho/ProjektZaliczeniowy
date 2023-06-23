@@ -6,24 +6,23 @@
              Title="Nowa Pacjent">
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
-            <Label Text="&#x0a;Nowy Pacjent" FontSize="Medium" FontAttributes="Bold"
-                    HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="&#x0a;Nowy Pacjent" Style="{StaticResource LogoLabelStyle}"/>
             <Image Source="killer.png" WidthRequest="100" HeightRequest="50"></Image>
-            <Label Text="&#x0a;Imię" FontSize="Medium" />
+            <Label Text="&#x0a;Imię" Style="{StaticResource CrimsonLabelStyle}"/>
             <Entry Text="{Binding Imie, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
-            <Label Text="Nazwisko" FontSize="Medium" />
+            <Label Text="Nazwisko" Style="{StaticResource CrimsonLabelStyle}"/>
             <Entry Text="{Binding Nazwisko, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
-            <Label Text="Data urodzenia" FontSize="Medium" />
+            <Label Text="Data urodzenia" Style="{StaticResource CrimsonLabelStyle}"/>
             <DatePicker Date="{Binding DataUrodzenia, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
             <Picker Title="Wybierz lekarza prowadzącego"
                     ItemsSource="{Binding Pracownicy}"
                     ItemDisplayBinding="{Binding ImieNazwisko}"
                     SelectedItem="{Binding WybranyPracownik}"
-                    FontSize="Medium" />
+                    Style="{StaticResource BlueLabelStyle}"/>
             <RadioButton Content="Mężczyzna" IsChecked="{Binding Plec}"/>
             <RadioButton Content="Kobieta"/>
-            <Label Text="Opis" FontSize="Medium" />
-            <Editor Text="{Binding Opis, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="1"/>
+            <Label Text="Opis" Style="{StaticResource CrimsonLabelStyle}"/>
+            <Editor Text="{Binding Opis, Mode=TwoWay}" AutoSize="TextChanges" Margin="1" Style="{StaticResource CrimsonLabelStyle}"/>
             <StackLayout Orientation="Horizontal">
                 <Button Text="Anuluj" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />
                 <Button Text="Zapisz" Command="{Binding SaveCommand}" Style="{StaticResource RedButton}" HorizontalOptions="FillAndExpand" />

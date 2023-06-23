@@ -6,12 +6,11 @@
              Title="Nowa Choroba">
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15" >
-            <Label Text="&#x0a;Nowa Choroba" FontSize="Medium" FontAttributes="Bold"
-                    HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="&#x0a;Nowa Choroba" Style="{StaticResource LogoLabelStyle}"/>
             <Image Source="diabetes.png" WidthRequest="100" HeightRequest="50"></Image>
-            <Label Text="&#x0a;Nazwa" FontSize="Medium" FontAttributes="Bold"/>
+            <Label Text="&#x0a;Nazwa" Style="{StaticResource CrimsonLabelStyle}"/>
             <Entry Text="{Binding Nazwa, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
-            <Label Text="Opis" FontSize="Medium" FontAttributes="Bold"/>
+            <Label Text="Opis" Style="{StaticResource CrimsonLabelStyle}"/>
             <Editor Text="{Binding Opis, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" AutoSize="TextChanges" FontSize="Medium" Margin="1"/>
             <StackLayout Orientation="Horizontal">
                 <Button Text="Anuluj" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />

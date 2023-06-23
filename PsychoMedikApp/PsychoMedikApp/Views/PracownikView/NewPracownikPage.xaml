@@ -6,29 +6,28 @@
              Title="Nowy Pracownik">
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
-            <Label Text="&#x0a;Nowy Pracownik" FontSize="Medium" FontAttributes="Bold"
-                    HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="&#x0a;Nowy Pracownik" Style="{StaticResource LogoLabelStyle}"/>
             <Image Source="hospital.png" WidthRequest="100" HeightRequest="50"></Image>
-            <Label Text="&#x0a;Imię"  FontSize="Medium" FontAttributes="Bold" />
+            <Label Text="&#x0a;Imię"  Style="{StaticResource CrimsonLabelStyle}"/>
             <Entry Text="{Binding Imie, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
-            <Label Text="Nazwisko"  FontSize="Medium" FontAttributes="Bold" />
+            <Label Text="Nazwisko"  Style="{StaticResource CrimsonLabelStyle}"/>
             <Entry Text="{Binding Nazwisko, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
-            <Label Text="Opis"  FontSize="Medium" FontAttributes="Bold" />
+            <Label Text="Opis"  Style="{StaticResource CrimsonLabelStyle}"/>
             <Editor Text="{Binding Opis, Mode=TwoWay}" AutoSize="TextChanges"  Margin="1" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
-            <Label Text="Stan Cywilny"  FontSize="Medium" FontAttributes="Bold" />
+            <Label Text="Stan Cywilny"  Style="{StaticResource CrimsonLabelStyle}"/>
             <Editor Text="{Binding StanCywilny, Mode=TwoWay}" AutoSize="TextChanges" Margin="1" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
-            <Label Text="Płeć"  FontSize="Medium" FontAttributes="Bold" />
+            <Label Text="Płeć"  Style="{StaticResource CrimsonLabelStyle}"/>
             <RadioButton Content="Mężczyzna" IsChecked="{Binding Plec}"/>
             <RadioButton Content="Kobieta"/>
-            <Label Text="Data Urodzenia"  FontSize="Medium" FontAttributes="Bold" />
-            <DatePicker Date="{Binding DataUrodzenia, Mode=TwoWay}" FontSize="Medium"/>
-            <Label Text="Data zatrudnienia"  FontSize="Medium" FontAttributes="Bold" />
-            <DatePicker Date="{Binding DataZatrudnienia, Mode=TwoWay}" FontSize="Medium"/>
+            <Label Text="Data Urodzenia" Style="{StaticResource CrimsonLabelStyle}"/>
+            <DatePicker Date="{Binding DataUrodzenia, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}"/>
+            <Label Text="Data zatrudnienia" Style="{StaticResource CrimsonLabelStyle}"/>
+            <DatePicker Date="{Binding DataZatrudnienia, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}"/>
             <Picker Title="Wybierz stanowisko"
                     ItemsSource="{Binding Stanowiska}"
                     ItemDisplayBinding="{Binding Nazwa}"
                     SelectedItem="{Binding WybraneStanowisko}"
-                    FontSize="Medium" />
+                   Style="{StaticResource BlueLabelStyle}"/>
             <StackLayout Orientation="Horizontal">
                 <Button Text="Anuluj" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />
                 <Button Text="Zapisz" Command="{Binding SaveCommand}" Style="{StaticResource RedButton}" HorizontalOptions="FillAndExpand" />

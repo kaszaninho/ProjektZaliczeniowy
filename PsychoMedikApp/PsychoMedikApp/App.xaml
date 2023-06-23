@@ -54,11 +54,19 @@
                 <Setter Property="FontAttributes" Value=" Italic" />
                 <Setter Property="FontSize" Value="26" />
             </Style>
-            <Style x:Key="WhiteLabelStyle" TargetType="Label">
-                <Setter Property="TextColor" Value="White" />
+            <Style x:Key="CrimsonLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="FontSize" Value="16" />
             </Style>
+            <Style x:Key="LogoLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
-</Application>
+</Application> 
+                    

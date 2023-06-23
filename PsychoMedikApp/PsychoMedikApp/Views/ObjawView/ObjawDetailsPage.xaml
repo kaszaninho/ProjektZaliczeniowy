@@ -5,16 +5,15 @@
              Title="Szczegóły Choroby">
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
-            <Label Text="&#x0a;Szczegóły Objawu" FontSize="Medium" FontAttributes="Bold"
-                   HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="&#x0a;Szczegóły Objawu" Style="{StaticResource LogoLabelStyle}"/>
             <Image Source="heart.png" WidthRequest="100" HeightRequest="50"></Image>
-            <Label Text="Nazwa" FontSize="Medium" FontAttributes="Bold" />
+            <Label Text="Nazwa" Style="{StaticResource CrimsonLabelStyle}"/>
             <Label Text="{Binding Nazwa}" FontSize="Medium" Style="{StaticResource BlueLabelStyle}" />
-            <Label Text="Opis" FontSize="Medium" FontAttributes="Bold" />
+            <Label Text="Opis" Style="{StaticResource CrimsonLabelStyle}"/>
             <Label Text="{Binding Opis}" FontSize="Medium" Style="{StaticResource BlueLabelStyle}" />
-            <Label Text="Data utworzenia" FontSize="Medium" FontAttributes="Bold" />
+            <Label Text="Data utworzenia" Style="{StaticResource CrimsonLabelStyle}"/>
             <Label Text="{Binding DataUtworzenia}" FontSize="Medium" Style="{StaticResource BlueLabelStyle}" />
-            <Label Text="Data modyfikacji" FontSize="Medium" FontAttributes="Bold" />
+            <Label Text="Data modyfikacji" Style="{StaticResource CrimsonLabelStyle}"/>
             <Label Text="{Binding DataModyfikacji}" FontSize="Medium" Style="{StaticResource BlueLabelStyle}" />
             <StackLayout Orientation="Horizontal">
                 <Button Text="Anuluj" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />

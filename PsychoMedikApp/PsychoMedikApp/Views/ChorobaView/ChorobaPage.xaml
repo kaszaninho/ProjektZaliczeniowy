@@ -12,8 +12,7 @@
     </ContentPage.ToolbarItems>
 
     <StackLayout>
-        <Label Text="&#x0a;Choroby" FontSize="Medium" FontAttributes="Bold"
-                   HorizontalOptions="Center" VerticalOptions="Center"/>
+        <Label Text="&#x0a;Choroby" Style="{StaticResource LogoLabelStyle}"/>
         <Image Source="sick.png" WidthRequest="100" HeightRequest="50"></Image>
         <RefreshView x:DataType="local:ChorobaViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
             <CollectionView x:Name="ItemsListView"
@@ -23,18 +22,18 @@
                     <DataTemplate>
 
                         <StackLayout Padding="10" x:DataType="model:Choroba">
-                            <Label Text="Nazwa Choroby" FontAttributes="Bold" FontSize="Medium" />
+                            <Label Text="Nazwa Choroby" Style="{StaticResource CrimsonLabelStyle}"/>
                             <Label Text="{Binding Nazwa}"
                                LineBreakMode="NoWrap"
                                 Style="{StaticResource BlueLabelStyle}"
                                />
-                            <Label Text="Opis Choroby" FontAttributes="Bold" FontSize="Medium"/>
+                            <Label Text="Opis Choroby" Style="{StaticResource CrimsonLabelStyle}"/>
 
                             <Label Text="{Binding Opis}&#x0a;"
                                LineBreakMode="NoWrap"
                                 Style="{StaticResource BlueLabelStyle}"
                                />
-                            <BoxView Color="Azure" HeightRequest="1" HorizontalOptions="FillAndExpand" />
+                            <BoxView Color="#2A83A9" HeightRequest="1" HorizontalOptions="FillAndExpand" />
 
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer

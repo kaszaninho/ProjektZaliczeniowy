@@ -106,6 +106,8 @@
   <ItemGroup>
     <AndroidResource Include="Assets\psycho.png" />
     <Content Include="about.png" />
+    <Content Include="Assets\poster.png" />
+    <Content Include="Assets\schedule.png" />
     <Content Include="coronavirus.png" />
     <Content Include="diabetes.png" />
     <Content Include="Dizzy.png" />
@@ -148,6 +150,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <AndroidResource Include="psycho.png" />
     <Content Include="room.png" />
+    <Content Include="schedule.png" />
     <Content Include="sick.png" />
     <Content Include="visit1.png" />
     <Content Include="xamarin_logo.png" />

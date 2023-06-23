@@ -11,8 +11,7 @@
         <ToolbarItem Text="Dodaj" Command="{Binding AddItemCommand}" />
     </ContentPage.ToolbarItems>
     <StackLayout>
-        <Label Text="&#x0a;Objawy" FontSize="Medium" FontAttributes="Bold"
-                   HorizontalOptions="Center" VerticalOptions="Center"/>
+        <Label Text="&#x0a;Objawy" Style="{StaticResource LogoLabelStyle}"/>
         <Image Source="coronavirus.png" WidthRequest="100" HeightRequest="50"></Image>
         <RefreshView x:DataType="local:ObjawViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
             <CollectionView x:Name="ItemsListView"
@@ -21,12 +20,12 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Padding="10" x:DataType="model:Objaw">
-                            <Label Text="Nazwa " Style="{StaticResource WhiteLabelStyle}"/>
+                            <Label Text="Nazwa " Style="{StaticResource CrimsonLabelStyle}"/>
                             <Label Text="{Binding Nazwa}"
                                LineBreakMode="NoWrap"
                                 Style="{StaticResource BlueLabelStyle}"
                                 />
-                            <Label Text="Opis" Style="{StaticResource WhiteLabelStyle}" />
+                            <Label Text="Opis" Style="{StaticResource CrimsonLabelStyle}"/>
                             <Label Text="{Binding Opis}"
                                LineBreakMode="NoWrap"
                                  Style="{StaticResource BlueLabelStyle}"
