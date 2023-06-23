@@ -193,4 +193,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\poster.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\schedule.png" />
+  </ItemGroup>
 </Project>

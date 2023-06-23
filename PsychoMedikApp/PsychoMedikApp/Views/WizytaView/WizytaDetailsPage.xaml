@@ -14,13 +14,13 @@
              <Label Text="Pacjent" FontAttributes="Bold" FontSize="Medium" />
             <Label Text="{Binding ImieNazwiskoPacjenta}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="{Binding IdPacjenta}" Style="{StaticResource BlueLabelStyle}" />
-            <Label Text="Pokój"  FontAttributes="Bold" FontSize="Medium" />
+            <Label Text="Pokój"  Style="{StaticResource CrimsonLabelStyle}"/>
             <Label Text="{Binding IdPokoju}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="Data wizyty"  FontAttributes="Bold" FontSize="Medium" />
             <Label Text="{Binding DataWizyty, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="Data utworzenia" FontAttributes="Bold" FontSize="Medium" />
             <Label Text="{Binding DataUtworzenia}" Style="{StaticResource BlueLabelStyle}" />
-            <Label Text="Data modyfikacji"  FontAttributes="Bold" FontSize="Medium" />
+            <Label Text="Data modyfikacji"  Style="{StaticResource CrimsonLabelStyle}"/>
             <Label Text="{Binding DataModyfikacji}" Style="{StaticResource BlueLabelStyle}" />
             <StackLayout Orientation="Horizontal">
                 <Button Text="Cofnij" Command="{Binding CancelCommand}" Style="{StaticResource RedButton}" HorizontalOptions="FillAndExpand" />

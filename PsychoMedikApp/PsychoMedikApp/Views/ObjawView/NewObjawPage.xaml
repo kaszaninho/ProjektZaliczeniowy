@@ -6,12 +6,11 @@
              Title="Nowa Objaw">
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
-            <Label Text="&#x0a;Nowy Objaw" FontSize="Medium" FontAttributes="Bold"
-                    HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="&#x0a;Nowy Objaw" Style="{StaticResource LogoLabelStyle}"/>
             <Image Source="heart.png" WidthRequest="100" HeightRequest="50"></Image>
-            <Label Text="&#x0a;Nazwa" FontSize="Medium" FontAttributes="Bold"/>
+            <Label Text="&#x0a;Nazwa" Style="{StaticResource CrimsonLabelStyle}"/>
             <Entry Text="{Binding Nazwa, Mode=TwoWay}" FontSize="Medium"  Style="{StaticResource BlueLabelStyle}" />
-            <Label Text="Opis" FontSize="Medium"  FontAttributes="Bold"/>
+            <Label Text="Opis" Style="{StaticResource CrimsonLabelStyle}"/>
             <Editor Text="{Binding Opis, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="1" Style="{StaticResource BlueLabelStyle}" />
             <StackLayout Orientation="Horizontal">
                 <Button Text="Anuluj" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />

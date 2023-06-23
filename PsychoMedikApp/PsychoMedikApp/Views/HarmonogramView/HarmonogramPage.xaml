@@ -14,12 +14,12 @@
         <StackLayout Margin="20" Padding="10">
             <Label Text="Data początkowa:"
                                LineBreakMode="NoWrap"
-                               Style="{DynamicResource ListItemTextStyle}"
+                               Style="{DynamicResource CrimsonLabelStyle}"
                                FontSize="12"/>
             <DatePicker Date="{Binding DataPoczatkowa, Mode=TwoWay}" FontSize="Medium" />
             <Label Text="Data końcowa:"
                                LineBreakMode="NoWrap"
-                               Style="{DynamicResource ListItemTextStyle}"
+                               Style="{DynamicResource CrimsonLabelStyle}"
                                FontSize="12"/>
             <DatePicker Date="{Binding DataKoncowa, Mode=TwoWay}" FontSize="Medium" />
             <Picker Title="Wybierz pracownika"
@@ -39,15 +39,15 @@
 
                     <Label Grid.Column="0" Text="Imię i Nazwisko Pracownika"
                            LineBreakMode="NoWrap"
-                           Style="{DynamicResource ListItemTextStyle}"
+                           Style="{DynamicResource BlueLabelStyle}"
                            FontSize="12"/>
                     <Label Grid.Column="1" Text="Data pracy"
                            LineBreakMode="NoWrap"
-                           Style="{DynamicResource ListItemTextStyle}"
+                           Style="{DynamicResource BlueLabelStyle}"
                            FontSize="12"/>
                     <Label Grid.Column="2" Text="Godzina rozpoczęcia"
                            LineBreakMode="NoWrap"
-                           Style="{DynamicResource ListItemTextStyle}"
+                           Style="{DynamicResource BlueLabelStyle}"
                            FontSize="12"/>
                     <Label Grid.Column="3" Text="Godzina zakończenia"
                            LineBreakMode="NoWrap"

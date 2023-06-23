@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:model="clr-namespace:PsychoMedik.Service.Reference"
              x:Class="PsychoMedikApp.Views.HarmonogramView.HarmonogramDetailsPage"
-             Title="Szczegóły Harmonogramu">
+             Title="Harmonogram Pracownika">
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
             <Label Text="Imię i nazwisko pracownika" FontSize="Medium" />
@@ -15,13 +15,13 @@
                 <Label Text="Do:  " FontSize="Medium" />
                 <Label Text="{Binding GodzinaZakonczenia, StringFormat='{}{0:00}:00'}" FontSize="Medium" />
             </StackLayout>
-            <Label Text="Data utworzenia" FontSize="Medium" />
-            <Label Text="{Binding DataUtworzenia}" FontSize="Medium" />
-            <Label Text="Data modyfikacji" FontSize="Medium" />
-            <Label Text="{Binding DataModyfikacji}" FontSize="Medium" />
+            <Label Text="Data utworzenia"   Style="{StaticResource CrimsonLabelStyle}"/>
+            <Label Text="{Binding DataUtworzenia}" Style="{StaticResource BlueLabelStyle}"/>
+            <Label Text="Data modyfikacji"   Style="{StaticResource CrimsonLabelStyle}"/>
+            <Label Text="{Binding DataModyfikacji}" Style="{StaticResource BlueLabelStyle}"/>
             <StackLayout Orientation="Horizontal">
-                <Button Text="Anuluj" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand" />
-                <Button Text="Usuń" Command="{Binding DeleteCommand}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Anuluj" Command="{Binding CancelCommand}"  Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Usuń" Command="{Binding DeleteCommand}"  Style="{StaticResource RedButton}" HorizontalOptions="FillAndExpand" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

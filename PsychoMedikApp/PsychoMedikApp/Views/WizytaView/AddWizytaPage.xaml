@@ -3,10 +3,9 @@
              x:Class="PsychoMedikApp.Views.WizytaView.AddWizytaPage">
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
-            <Label Text="&#x0a;Nowa Wizyta" FontSize="Medium" FontAttributes="Bold"
-                    HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="&#x0a;Nowa Wizyta" Style="{StaticResource LogoLabelStyle}"/>
             <Image Source="about.png" WidthRequest="100" HeightRequest="50"></Image>
-            <Label Text="&#x0a;Data Wizyty" FontSize="Medium" FontAttributes="Bold" />
+            <Label Text="&#x0a;Data Wizyty" Style="{StaticResource CrimsonLabelStyle}"/>
             <Frame CornerRadius="10" Padding="0" IsClippedToBounds="True">
                 <DatePicker Date="{Binding DataWizyty, Mode=TwoWay}" FontSize="Medium" />
             </Frame>
@@ -17,7 +16,7 @@
                         ItemsSource="{Binding Pokoje}" 
                         ItemDisplayBinding="{Binding Id}" 
                         SelectedItem="{Binding WybranyPokoj}" 
-                        FontSize="Medium" Margin="0" />
+                          Margin="0" Style="{StaticResource CrimsonLabelStyle}"/>
             </Frame>
             <StackLayout Orientation="Horizontal">
                 <Frame CornerRadius="10" Padding="0" IsClippedToBounds="True">
@@ -25,7 +24,7 @@
                             ItemsSource="{Binding Pacjenci}" 
                             ItemDisplayBinding="{Binding Imie}" 
                             SelectedItem="{Binding WybranyPacjentData}" 
-                            FontSize="Medium" Margin="0" />
+                              Margin="0" Style="{StaticResource CrimsonLabelStyle}"/>
                 </Frame>
                 <StackLayout Orientation="Horizontal">
                     <Button Text="Cancel" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand"></Button>
