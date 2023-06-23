@@ -32,7 +32,7 @@ namespace PsychoMedikApp.ViewModels.PacjentVM
         private string nazwisko;
         private DateTime dataUrodzenia;
         private string plec;
-        private string imieNazwiskoPracownikaProwadzacego;
+        private string imieNazwisko;
         private DateTime dataUtworzenia;
         private DateTime dataModyfikacji;
         #endregion
@@ -42,7 +42,7 @@ namespace PsychoMedikApp.ViewModels.PacjentVM
         public string Nazwisko { get => nazwisko; set => SetProperty(ref nazwisko, value); }
         public DateTime DataUrodzenia { get => dataUrodzenia; set => SetProperty(ref dataUrodzenia, value); }
         public string Plec { get => plec; set => SetProperty(ref plec, value); }
-        public string ImieNazwiskoPracownikaProwadzacego { get => imieNazwiskoPracownikaProwadzacego; set => SetProperty(ref imieNazwiskoPracownikaProwadzacego, value); }
+        public string ImieNazwisko { get => imieNazwisko; set => SetProperty(ref imieNazwisko, value); }
         public DateTime DataUtworzenia { get => dataUtworzenia; set => SetProperty(ref dataUtworzenia, value); }
         public DateTime DataModyfikacji { get => dataModyfikacji; set => SetProperty(ref dataModyfikacji, value); }
         public ObservableCollection<HistoriaChorobyForView> HistorieChoroby { get; }
@@ -58,8 +58,7 @@ namespace PsychoMedikApp.ViewModels.PacjentVM
             DataUrodzenia = item.DataUrodzenia?.DateTime ?? DateTime.Now;
             Imie = item.Imie;
             Nazwisko = item.Nazwisko;
-            ImieNazwiskoPracownikaProwadzacego = item.ImieNazwiskoPracownikaProwadzacego;
-            this.CopyProperties(item);
+            ImieNazwisko = item.ImieNazwisko;
             await ExecuteLoadItemsCommand();
         }
 
@@ -70,7 +69,7 @@ namespace PsychoMedikApp.ViewModels.PacjentVM
             {
                 HistorieChoroby.Clear();
                 var dataStore = DependencyService.Get<HistoriaChorobyDataStore>();
-                var items = (await dataStore.GetItemsAsync(true)).Where(historia => historia.Id == ItemId);
+                var items = (await dataStore.GetItemsAsync(true)).Where(historia => historia.IdPacjenta == ItemId);
                 foreach (var item in items)
                 {
                     HistorieChoroby.Add(item);

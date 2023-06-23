@@ -70,7 +70,6 @@ namespace PsychoMedikApp.ViewModels.PracownikVM
             NazwaStanowisko = item.NazwaStanowisko;
             DataUrodzenia = item.DataUrodzenia.Date;
             DataZatrudnienia = item.DataZatrudnienia.Date;
-            this.CopyProperties(item);
             await ExecuteLoadItemsCommand();
             //DataRezygnacji = item.DataRezygnacji;
         }

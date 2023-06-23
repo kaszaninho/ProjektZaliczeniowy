@@ -42,13 +42,14 @@ namespace PsychoMedikApp.ViewModels.PacjentVM
                 CzyAktywny = true,
                 DataModyfikacji = DateTime.Now,
                 DataUtworzenia = DateTime.Now,
-                ImieNazwiskoPracownikaProwadzacego = this.wybranyPracownik.Imie + " " + this.wybranyPracownik.Nazwisko
+                DataUrodzenia = this.DataUrodzenia,
+                ImieNazwisko = this.wybranyPracownik.Imie + " " + this.wybranyPracownik.Nazwisko,
+                IdPracownika = wybranyPracownik.Id
             }.CopyProperties(this);
         }
         public NewPacjentViewModel()
             : base()
         {
-            wybranyPracownik = new PracownikForView();
             var pracownikForViewDataStora = new PracownikDataStore();
             pracownikForViewDataStora.RefreshListFromService();
             pracownicy = pracownikForViewDataStora.items;

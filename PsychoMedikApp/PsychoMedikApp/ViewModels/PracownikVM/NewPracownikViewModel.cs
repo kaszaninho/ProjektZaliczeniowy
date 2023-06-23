@@ -40,7 +40,6 @@ namespace PsychoMedikApp.ViewModels.PracownikVM
         public NewPracownikViewModel()
             : base()
         {
-            wybraneStanowisko = new Stanowisko();
             var stanowiskoDataStore = new StanowiskoDataStore();
             stanowiskoDataStore.RefreshListFromService();
             stanowiska = stanowiskoDataStore.items;
@@ -54,7 +53,7 @@ namespace PsychoMedikApp.ViewModels.PracownikVM
                 DataModyfikacji = DateTime.Now,
                 DataUtworzenia = DateTime.Now,
                 Opis = this.Opis,
-                IdStanowiska = wybraneStanowisko.Id,
+                IdStanowiska = WybraneStanowisko.Id,
                 DataUrodzenia = this.DataUrodzenia,
                 DataRezygnacji = this.DataRezygnacji,
                 DataZatrudnienia = this.DataZatrudnienia,

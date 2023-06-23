@@ -2076,12 +2076,12 @@
           "plec": {
             "type": "boolean"
           },
-          "idPracownikaProwadzacego": {
+          "idPracownika": {
             "type": "integer",
             "format": "int32",
             "nullable": true
           },
-          "imieNazwiskoPracownikaProwadzacego": {
+          "imieNazwisko": {
             "type": "string",
             "nullable": true
           }

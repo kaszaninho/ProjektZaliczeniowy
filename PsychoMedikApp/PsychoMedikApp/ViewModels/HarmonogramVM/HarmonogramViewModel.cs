@@ -53,6 +53,7 @@ namespace PsychoMedikApp.ViewModels.HarmonogramVM
                     );
 
                 }
+                items.OrderBy(item => item.DataPracy);
             }
             catch (Exception ex)
             {
