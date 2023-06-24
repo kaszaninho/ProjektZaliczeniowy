@@ -1,71 +1,76 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:local="clr-namespace:PsychoMedikApp.ViewModels.PracownikVM" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:PsychoMedik.Service.Reference"
+             xmlns:local="clr-namespace:PsychoMedikApp.ViewModels.PracownikVM"
              x:Class="PsychoMedikApp.Views.PracownikView.PracownikDetailsPage"
              Title="Szczegóły Pracownika">
     <ContentPage.Content>
-        <StackLayout Spacing="3" Padding="15">
-            <Label Text="Szczegóły Pracownika" Style="{StaticResource LogoLabelStyle}"/>
-            <Image Source="doctor.png" WidthRequest="60" HeightRequest="25"></Image>
-            <Label Text="Nazwa" Style="{StaticResource CrimsonLabelStyle}"/>
-            <Label Text="{Binding Imie}" Style="{StaticResource BlueLabelStyle}" />
-            <Label Text="Opis" Style="{StaticResource CrimsonLabelStyle}"/>
-            <Label Text="{Binding Nazwisko}" Style="{StaticResource BlueLabelStyle}" />
-            <Label Text="Data urodzenia" FontSize="18" FontAttributes="Bold" />
-            <Label Text="{Binding DataUrodzenia, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}"/>
-            <Label Text="Data zatrudnienia" FontSize="18" FontAttributes="Bold" />
-            <Label Text="{Binding DataZatrudnienia, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}" />
-            <Label Text="Data rezygnacji" FontSize="18" FontAttributes="Bold" />
-            <Label Text="{Binding DataRezygnacji, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}"/>
-            <Label Text="Stan cywilny" FontSize="18" FontAttributes="Bold" />
-            <Label Text="{Binding StanCywilny}" Style="{StaticResource BlueLabelStyle}" />
-            <Label Text="Płeć" Style="{StaticResource CrimsonLabelStyle}"/>
-            <Label Text="{Binding Plec}" Style="{StaticResource BlueLabelStyle}" />
-            <Label Text="Stanowisko" Style="{StaticResource CrimsonLabelStyle}"/>
-            <Label Text="{Binding NazwaStanowisko}" Style="{StaticResource BlueLabelStyle}"  />
-            <Label Text="Data utworzenia" Style="{StaticResource CrimsonLabelStyle}"/>
-            <Label Text="{Binding DataUtworzenia}" Style="{StaticResource BlueLabelStyle}"  />
-            <Label Text="Data modyfikacji" Style="{StaticResource CrimsonLabelStyle}"/>
-            <Label Text="{Binding DataModyfikacji}" Style="{StaticResource BlueLabelStyle}" />
-            <RefreshView x:DataType="local:PracownikDetailsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
-                <CollectionView x:Name="PacjenciListView"
+        <ScrollView>
+            <StackLayout Spacing="3" Padding="15">
+                <Label Text="Szczegóły Pracownika" Style="{StaticResource LogoLabelStyle}"/>
+                <Image Source="doctor.png" WidthRequest="60" HeightRequest="25"></Image>
+                <Label Text="Imię" Style="{StaticResource CrimsonLabelStyle}"/>
+                <Label Text="{Binding Imie}" Style="{StaticResource BlueLabelStyle}" />
+                <Label Text="Nazwisko" Style="{StaticResource CrimsonLabelStyle}"/>
+                <Label Text="{Binding Nazwisko}" Style="{StaticResource BlueLabelStyle}" />
+                <Label Text="Data urodzenia" FontSize="18" FontAttributes="Bold" />
+                <Label Text="{Binding DataUrodzenia, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}"/>
+                <Label Text="Data zatrudnienia" FontSize="18" FontAttributes="Bold" />
+                <Label Text="{Binding DataZatrudnienia, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}" />
+                <Label Text="Data rezygnacji" FontSize="18" FontAttributes="Bold" />
+                <Label Text="{Binding DataRezygnacji, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}"/>
+                <Label Text="Stan cywilny" FontSize="18" FontAttributes="Bold" />
+                <Label Text="{Binding StanCywilny}" Style="{StaticResource BlueLabelStyle}" />
+                <Label Text="Płeć" Style="{StaticResource CrimsonLabelStyle}"/>
+                <Label Text="{Binding Plec}" Style="{StaticResource BlueLabelStyle}" />
+                <Label Text="Stanowisko" Style="{StaticResource CrimsonLabelStyle}"/>
+                <Label Text="{Binding NazwaStanowisko}" Style="{StaticResource BlueLabelStyle}"  />
+                <Label Text="Data utworzenia" Style="{StaticResource CrimsonLabelStyle}"/>
+                <Label Text="{Binding DataUtworzenia}" Style="{StaticResource BlueLabelStyle}"  />
+                <Label Text="Data modyfikacji" Style="{StaticResource CrimsonLabelStyle}"/>
+                <Label Text="{Binding DataModyfikacji}" Style="{StaticResource BlueLabelStyle}" />
+                <RefreshView x:DataType="local:PracownikDetailsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+                    <StackLayout>
+                        <Label Text="&#x0a;Wizyty Zaplanowane/Odbyte" FontSize="Medium" FontAttributes="Bold"
+                                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <CollectionView x:Name="PacjenciListView"
                                 ItemsSource="{Binding Wizyty}"
                                 SelectionMode="None">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <StackLayout Padding="10" x:DataType="model:WizytaForView">
-                                <Label Text="{Binding Id}" 
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout Padding="10" x:DataType="model:WizytaForView">
+                                        <Label Text="{Binding Id}" 
                                     LineBreakMode="NoWrap" 
                                     Style="{DynamicResource BlueLabelStyle}"
                                     FontSize="12" />
-                                <Label Text="{Binding ImieNazwiskoPacjenta}" 
+                                        <Label Text="{Binding ImieNazwiskoPacjenta}" 
                                     LineBreakMode="NoWrap" 
                                     Style="{DynamicResource BlueLabelStyle2}" 
                                       />
-                                <Label Text="{Binding DataWizyty}" 
+                                        <Label Text="{Binding DataWizyty}" 
                                     LineBreakMode="NoWrap" 
                                     Style="{DynamicResource BlueLabelStyle2}" 
                                      />
-                                <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer
+                                        <StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer
                                 NumberOfTapsRequired="1"
                                 Command="{Binding Source={RelativeSource AncestorType={x:Type local:PracownikDetailsViewModel}}, Path=ItemTapped}"
                                 CommandParameter="{Binding .}">
-                                    </TapGestureRecognizer>
-                                </StackLayout.GestureRecognizers>
-                            </StackLayout>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-
-            </RefreshView>
-            <StackLayout Orientation="Horizontal">
-                <Button Text="Anuluj" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />
-                <Button Text="Usuń" Command="{Binding DeleteCommand}" Style="{StaticResource RedButton}" HorizontalOptions="FillAndExpand" />
-                <Button Text="Dodaj wizytę" Command="{Binding AddWizytaCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />
+                                            </TapGestureRecognizer>
+                                        </StackLayout.GestureRecognizers>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </StackLayout>
+                </RefreshView>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Anuluj" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />
+                    <Button Text="Usuń" Command="{Binding DeleteCommand}" Style="{StaticResource RedButton}" HorizontalOptions="FillAndExpand" />
+                    <Button Text="Dodaj wizytę" Command="{Binding AddWizytaCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

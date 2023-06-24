@@ -53,7 +53,7 @@
                            FontSize="12"/>
                     <Label Grid.Column="3" Text="Godzina zakończenia"
                            LineBreakMode="NoWrap"
-                           Style="{DynamicResource ListItemTextStyle}"
+                           Style="{DynamicResource BlueLabelStyle}"
                            FontSize="12"/>
                 </Grid>
                 <RefreshView Padding="20" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">

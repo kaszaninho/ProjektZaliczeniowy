@@ -5,7 +5,6 @@ using PsychoMedikApp.Views.HarmonogramView;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -52,7 +51,6 @@ namespace PsychoMedikApp.ViewModels.HarmonogramVM
                     );
 
                 }
-                items.OrderBy(item => item.DataPracy);
             }
             catch (Exception ex)
             {

@@ -8,7 +8,7 @@ namespace PsychoMedikApp.ViewModels.PacjentVM
     public class PacjentViewModel : AListViewModel<PacjentForView>
     {
         public PacjentViewModel()
-            : base("Pacjenty")
+            : base("Pacjenci")
         {
         }
 

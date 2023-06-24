@@ -14,7 +14,6 @@ namespace PsychoMedikApp.ViewModels.HarmonogramVM
             pracownikDataStore.RefreshListFromService();
             pracownicy = pracownikDataStore.items;
         }
-
         #region Pola 
         private DateTime? dataPracy;
         private int? godzinaRozpoczecia;
@@ -43,7 +42,6 @@ namespace PsychoMedikApp.ViewModels.HarmonogramVM
                 IdPracownika = wybranyPracownik.Id,
             };
         }
-
         public override bool ValidateSave()
         {
             return !DataPracy.Equals(null);
