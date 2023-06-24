@@ -14,7 +14,7 @@
             <Label Text="Nazwisko" Style="{StaticResource CrimsonLabelStyle}"/>
             <Entry Text="{Binding Nazwisko, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
             <Label Text="Data urodzenia" Style="{StaticResource CrimsonLabelStyle}"/>
-            <DatePicker Date="{Binding DataUrodzenia, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
+            <DatePicker Date="{Binding DataUrodzenia, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" />
             <Picker Title="Wybierz lekarza prowadzącego"
                     ItemsSource="{Binding Pracownicy}"
                     ItemDisplayBinding="{Binding ImieNazwisko}"

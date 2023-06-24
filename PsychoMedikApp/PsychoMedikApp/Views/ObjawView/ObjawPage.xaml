@@ -30,7 +30,7 @@
                                LineBreakMode="NoWrap"
                                  Style="{StaticResource BlueLabelStyle}"
                                 />
-                            <BoxView Color="Azure" HeightRequest="1" HorizontalOptions="FillAndExpand" />
+                            <BoxView Color="#2A83A9" HeightRequest="1" HorizontalOptions="FillAndExpand" />
 
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer

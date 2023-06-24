@@ -10,25 +10,25 @@
             <Label Text="Szczegóły Pracownika" Style="{StaticResource LogoLabelStyle}"/>
             <Image Source="doctor.png" WidthRequest="60" HeightRequest="25"></Image>
             <Label Text="Nazwa" Style="{StaticResource CrimsonLabelStyle}"/>
-            <Label Text="{Binding Imie}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="{Binding Imie}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="Opis" Style="{StaticResource CrimsonLabelStyle}"/>
-            <Label Text="{Binding Nazwisko}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="{Binding Nazwisko}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="Data urodzenia" FontSize="18" FontAttributes="Bold" />
-            <Label Text="{Binding DataUrodzenia, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="{Binding DataUrodzenia, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}"/>
             <Label Text="Data zatrudnienia" FontSize="18" FontAttributes="Bold" />
-            <Label Text="{Binding DataZatrudnienia, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="{Binding DataZatrudnienia, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="Data rezygnacji" FontSize="18" FontAttributes="Bold" />
-            <Label Text="{Binding DataRezygnacji, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="{Binding DataRezygnacji, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}"/>
             <Label Text="Stan cywilny" FontSize="18" FontAttributes="Bold" />
-            <Label Text="{Binding StanCywilny}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="{Binding StanCywilny}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="Płeć" Style="{StaticResource CrimsonLabelStyle}"/>
-            <Label Text="{Binding Plec}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="{Binding Plec}" Style="{StaticResource BlueLabelStyle}" />
             <Label Text="Stanowisko" Style="{StaticResource CrimsonLabelStyle}"/>
-            <Label Text="{Binding NazwaStanowisko}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="{Binding NazwaStanowisko}" Style="{StaticResource BlueLabelStyle}"  />
             <Label Text="Data utworzenia" Style="{StaticResource CrimsonLabelStyle}"/>
-            <Label Text="{Binding DataUtworzenia}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="{Binding DataUtworzenia}" Style="{StaticResource BlueLabelStyle}"  />
             <Label Text="Data modyfikacji" Style="{StaticResource CrimsonLabelStyle}"/>
-            <Label Text="{Binding DataModyfikacji}" Style="{StaticResource BlueLabelStyle}" FontSize="16" />
+            <Label Text="{Binding DataModyfikacji}" Style="{StaticResource BlueLabelStyle}" /> 
             <RefreshView x:DataType="local:PracownikDetailsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
                 <CollectionView x:Name="PacjenciListView"
                                 ItemsSource="{Binding Wizyty}"
@@ -42,12 +42,12 @@
                                     FontSize="12" />
                                 <Label Text="{Binding ImieNazwiskoPacjenta}" 
                                     LineBreakMode="NoWrap" 
-                                    Style="{DynamicResource BlueLabelStyle}" 
-                                    FontSize="16" />
+                                    Style="{DynamicResource BlueLabelStyle2}" 
+                                      />
                                 <Label Text="{Binding DataWizyty}" 
                                     LineBreakMode="NoWrap" 
-                                    Style="{DynamicResource BlueLabelStyle}" 
-                                    FontSize="16" />
+                                    Style="{DynamicResource BlueLabelStyle2}" 
+                                     />
                                 <StackLayout.GestureRecognizers>
                                     <TapGestureRecognizer
                                 NumberOfTapsRequired="1"

@@ -56,6 +56,11 @@
                 <Setter Property="FontAttributes" Value=" Italic" />
                 <Setter Property="FontSize" Value="26" />
             </Style>
+            <Style x:Key="BlueLabelStyle2" TargetType="Label">
+                <Setter Property="TextColor" Value="#2A83A9" />
+                <Setter Property="FontAttributes" Value=" Italic" />
+                <Setter Property="FontSize" Value="16" />
+            </Style>
             <Style x:Key="CrimsonLabelStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="Black" />
                 <Setter Property="FontAttributes" Value="Bold" />

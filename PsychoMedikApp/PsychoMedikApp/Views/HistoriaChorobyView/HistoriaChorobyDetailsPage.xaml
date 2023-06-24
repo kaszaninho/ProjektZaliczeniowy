@@ -9,26 +9,25 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="3" Padding="15">
-                <Label Text="&#x0a;Szczegóły Choroby" FontSize="Medium" FontAttributes="Bold"
-                   HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Label Text="&#x0a;Szczegóły Choroby"  Style="{StaticResource LogoLabelStyle}"/>
                 <Image Source="dizzy.png" WidthRequest="100" HeightRequest="50"></Image>
-                <Label Text="Pacjent" FontAttributes="Bold" FontSize="Medium" />
+                <Label Text="Pacjent" FontAttributes="Bold" FontSize="Medium" Style="{StaticResource CrimsonLabelStyle}"/>
                 <Label Text="{Binding ImieNazwiskoPacjenta}"  Style="{StaticResource BlueLabelStyle}" />
                 <Label Text="{Binding IdPacjenta}" Style="{StaticResource BlueLabelStyle}" />
-                <Label Text="Lekarz"  FontAttributes="Bold" FontSize="Medium" />
+                <Label Text="Lekarz"  FontAttributes="Bold" Style="{StaticResource CrimsonLabelStyle}"/>
                 <Label Text="{Binding ImieNazwiskoPracownika}" Style="{StaticResource BlueLabelStyle}" />
                 <Label Text="{Binding IdPracownika}" Style="{StaticResource BlueLabelStyle}" />
-                <Label Text="Choroba"  FontAttributes="Bold" FontSize="Medium" />
+                <Label Text="Choroba"  FontAttributes="Bold" Style="{StaticResource CrimsonLabelStyle}"/>
                 <Label Text="{Binding IdChoroby}" Style="{StaticResource BlueLabelStyle}" />
-                <Label Text="Opis" FontAttributes="Bold" FontSize="Medium" />
+                <Label Text="Opis" FontAttributes="Bold" Style="{StaticResource CrimsonLabelStyle}"/>
                 <Label Text="{Binding Opis}" Style="{StaticResource BlueLabelStyle}" />
-                <Label Text="Data zdiagnozowania"  FontAttributes="Bold" FontSize="Medium" />
+                <Label Text="Data zdiagnozowania"  FontAttributes="Bold" Style="{StaticResource CrimsonLabelStyle}"/>
                 <Label Text="{Binding DataZdiagnozowania, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}" />
-                <Label Text="Data wyleczenia"  FontAttributes="Bold" FontSize="Medium" />
+                <Label Text="Data wyleczenia"  FontAttributes="Bold" Style="{StaticResource CrimsonLabelStyle}"/>
                 <Label Text="{Binding DataWyleczenia, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}" />
-                <Label Text="Data utworzenia"  FontAttributes="Bold" FontSize="Medium" />
+                <Label Text="Data utworzenia"  FontAttributes="Bold" Style="{StaticResource CrimsonLabelStyle}"/>
                 <Label Text="{Binding DataUtworzenia}" Style="{StaticResource BlueLabelStyle}" />
-                <Label Text="Data modyfikacji"  FontAttributes="Bold" FontSize="Medium" />
+                <Label Text="Data modyfikacji"  FontAttributes="Bold" Style="{StaticResource CrimsonLabelStyle}"/>
                 <Label Text="{Binding DataModyfikacji}" Style="{StaticResource BlueLabelStyle}" />
                 <StackLayout Orientation="Horizontal">
                     <Button Text="Cofnij" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />

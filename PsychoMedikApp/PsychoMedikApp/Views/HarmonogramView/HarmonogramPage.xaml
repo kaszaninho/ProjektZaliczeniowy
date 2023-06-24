@@ -16,18 +16,18 @@
                                LineBreakMode="NoWrap"
                                Style="{DynamicResource CrimsonLabelStyle}"
                                FontSize="12"/>
-            <DatePicker Date="{Binding DataPoczatkowa, Mode=TwoWay}" FontSize="Medium" />
+            <DatePicker Date="{Binding DataPoczatkowa, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}"/>
             <Label Text="Data końcowa:"
                                LineBreakMode="NoWrap"
                                Style="{DynamicResource CrimsonLabelStyle}"
                                FontSize="12"/>
-            <DatePicker Date="{Binding DataKoncowa, Mode=TwoWay}" FontSize="Medium" />
+            <DatePicker Date="{Binding DataKoncowa, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}"/>
             <Picker Title="Wybierz pracownika"
                     ItemsSource="{Binding Pracownicy}"
                     ItemDisplayBinding="{Binding ImieNazwisko}"
                     SelectedItem="{Binding WybranyPracownik}"
-                    FontSize="Medium" />
-            <Button Text="Wylistuj" Command="{Binding WylistujCommand}" HorizontalOptions="FillAndExpand" />
+                   Style="{StaticResource CrimsonLabelStyle}"/>
+            <Button Text="Wylistuj" Command="{Binding WylistujCommand}" HorizontalOptions="FillAndExpand" Style="{StaticResource BlueButton}"/>
             <StackLayout>
                 <Grid Margin="0" Padding="0" VerticalOptions="Start">
                     <Grid.ColumnDefinitions>

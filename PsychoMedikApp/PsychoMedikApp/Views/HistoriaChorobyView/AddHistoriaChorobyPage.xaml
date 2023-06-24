@@ -5,22 +5,22 @@
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
             <Label Text="Data Zdiagnozowania"  Style="{StaticResource CrimsonLabelStyle}"/>
-            <DatePicker Date="{Binding DataZdiagnozowania, Mode=TwoWay}" FontSize="Medium" />
+            <DatePicker Date="{Binding DataZdiagnozowania, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
             <Label Text="Data Wyleczenia"  Style="{StaticResource CrimsonLabelStyle}"/>
-            <DatePicker Date="{Binding DataWyleczenia, Mode=TwoWay}" FontSize="Medium" />
+            <DatePicker Date="{Binding DataWyleczenia, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
             <Label Text="Opis Choroby"  Style="{StaticResource CrimsonLabelStyle}"/>
             <Editor Text="{Binding Opis, Mode=TwoWay}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
             <Picker Title="Wybierz Pracownika" 
                     ItemsSource="{Binding Pracownicy}" 
                     ItemDisplayBinding="{Binding ImieNazwisko}" 
                     SelectedItem="{Binding WybranyPracownik}" 
-                    FontSize="Medium" Margin="0" />
+                    FontSize="Medium" Margin="0" Style="{StaticResource CrimsonLabelStyle}"/>
             <StackLayout Orientation="Horizontal">
                 <Picker Title="Wybierz chorobę" 
                     ItemsSource="{Binding Choroby}" 
                     ItemDisplayBinding="{Binding Nazwa}" 
                     SelectedItem="{Binding WybranaChoroba}" 
-                    FontSize="Medium" Margin="0" />
+                    FontSize="Medium" Margin="0" Style="{StaticResource CrimsonLabelStyle}"/> 
                 <StackLayout Orientation="Horizontal">
                     <Button Text="Cancel" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand"></Button>
                     <Button Text="Save" Command="{Binding SaveCommand}" Style="{StaticResource RedButton}" HorizontalOptions="FillAndExpand"></Button>
