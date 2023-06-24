@@ -106,7 +106,7 @@
     <FlyoutItem Title="Pacjenci" Icon="patient.png">
         <ShellContent Route="PacjentPage" ContentTemplate="{DataTemplate localPacjent:PacjentPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Harmonogram" Icon="patient.png">
+    <FlyoutItem Title="Harmonogram" Icon="schedule.png">
         <ShellContent Route="HarmonogramPage" ContentTemplate="{DataTemplate localHarmonogram:HarmonogramPage}" />
     </FlyoutItem>
 

@@ -1,6 +1,5 @@
 ﻿using PsychoMedik.Service.Reference;
 using PsychoMedikApp.Helpers;
-using PsychoMedikApp.Models;
 using PsychoMedikApp.Services;
 using PsychoMedikApp.ViewModels.Abstract;
 using System;

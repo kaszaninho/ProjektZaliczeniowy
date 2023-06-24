@@ -20,7 +20,7 @@
                     ItemsSource="{Binding Choroby}" 
                     ItemDisplayBinding="{Binding Nazwa}" 
                     SelectedItem="{Binding WybranaChoroba}" 
-                    FontSize="Medium" Margin="0" Style="{StaticResource CrimsonLabelStyle}"/> 
+                    FontSize="Medium" Margin="0" Style="{StaticResource CrimsonLabelStyle}"/>
                 <StackLayout Orientation="Horizontal">
                     <Button Text="Cancel" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand"></Button>
                     <Button Text="Save" Command="{Binding SaveCommand}" Style="{StaticResource RedButton}" HorizontalOptions="FillAndExpand"></Button>

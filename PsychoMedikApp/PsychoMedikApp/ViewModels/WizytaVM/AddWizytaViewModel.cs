@@ -1,6 +1,5 @@
 ﻿using PsychoMedik.Service.Reference;
 using PsychoMedikApp.Helpers;
-using PsychoMedikApp.Models;
 using PsychoMedikApp.Services;
 using PsychoMedikApp.ViewModels.Abstract;
 using System;
@@ -63,7 +62,7 @@ namespace PsychoMedikApp.ViewModels
                 IdPacjenta = WybranyPacjentData.Id,
                 IdPracownika = this.IdPracownika,
                 DataWizyty = DataWizyty,
-                Opis = Opis,                
+                Opis = Opis,
             }.CopyProperties(this);
         }
 

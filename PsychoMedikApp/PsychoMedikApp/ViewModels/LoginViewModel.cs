@@ -1,8 +1,5 @@
 ﻿using PsychoMedikApp.ViewModels.Abstract;
 using PsychoMedikApp.Views;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Xamarin.Forms;
 
 namespace PsychoMedikApp.ViewModels

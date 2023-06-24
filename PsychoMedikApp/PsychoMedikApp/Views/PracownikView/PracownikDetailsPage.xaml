@@ -28,7 +28,7 @@
             <Label Text="Data utworzenia" Style="{StaticResource CrimsonLabelStyle}"/>
             <Label Text="{Binding DataUtworzenia}" Style="{StaticResource BlueLabelStyle}"  />
             <Label Text="Data modyfikacji" Style="{StaticResource CrimsonLabelStyle}"/>
-            <Label Text="{Binding DataModyfikacji}" Style="{StaticResource BlueLabelStyle}" /> 
+            <Label Text="{Binding DataModyfikacji}" Style="{StaticResource BlueLabelStyle}" />
             <RefreshView x:DataType="local:PracownikDetailsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
                 <CollectionView x:Name="PacjenciListView"
                                 ItemsSource="{Binding Wizyty}"
@@ -55,11 +55,11 @@
                                 CommandParameter="{Binding .}">
                                     </TapGestureRecognizer>
                                 </StackLayout.GestureRecognizers>
-                            </StackLayout>                            
+                            </StackLayout>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-                                
+
             </RefreshView>
             <StackLayout Orientation="Horizontal">
                 <Button Text="Anuluj" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />

@@ -1,8 +1,5 @@
 ﻿using PsychoMedik.Service.Reference;
-using System;
-using System.Collections.Generic;
 using System.Net.Http;
-using System.Text;
 
 namespace PsychoMedikApp.Services.Abstract
 {

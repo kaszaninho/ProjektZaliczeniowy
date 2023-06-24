@@ -5,34 +5,34 @@
              Title="Szczegóły Pacjenta">
     <ContentPage.Content>
         <ScrollView>
-        <StackLayout Spacing="3" Padding="15">
-            <Label Text="&#x0a;Szczegóły Pacjenta" Style="{StaticResource LogoLabelStyle}"/>
-            <Image Source="patient.png" WidthRequest="100" HeightRequest="50"></Image>
-            <Label Text="Imię" Style="{StaticResource CrimsonLabelStyle}"/>
-            <Label Text="{Binding Imie}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
-            <Label Text="Nazwisko" Style="{StaticResource CrimsonLabelStyle}"/>
-            <Label Text="{Binding Nazwisko}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
+            <StackLayout Spacing="3" Padding="15">
+                <Label Text="&#x0a;Szczegóły Pacjenta" Style="{StaticResource LogoLabelStyle}"/>
+                <Image Source="patient.png" WidthRequest="100" HeightRequest="50"></Image>
+                <Label Text="Imię" Style="{StaticResource CrimsonLabelStyle}"/>
+                <Label Text="{Binding Imie}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
+                <Label Text="Nazwisko" Style="{StaticResource CrimsonLabelStyle}"/>
+                <Label Text="{Binding Nazwisko}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
                 <Label Text="Data urodzenia" Style="{StaticResource CrimsonLabelStyle}"/>
                 <Label Text="{Binding DataUrodzenia, StringFormat='{}{0:dd.MM.yyyy}'}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
                 <Label Text="Lekarz prowadzący" Style="{StaticResource CrimsonLabelStyle}"/>
                 <Label Text="{Binding ImieNazwisko}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
-            <Label Text="Płeć" Style="{StaticResource CrimsonLabelStyle}"/>
-            <Label Text="{Binding Plec}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
-            <Label Text="Data utworzenia" Style="{StaticResource CrimsonLabelStyle}"/>
-            <Label Text="{Binding DataUtworzenia}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
-            <Label Text="Data modyfikacji" Style="{StaticResource CrimsonLabelStyle}"/>
-            <Label Text="{Binding DataModyfikacji}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
-            <RefreshView x:DataType="local:PacjentDetailsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
-                <StackLayout>
-                <Label Text="&#x0a;Choroby" FontSize="Medium" FontAttributes="Bold"
+                <Label Text="Płeć" Style="{StaticResource CrimsonLabelStyle}"/>
+                <Label Text="{Binding Plec}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
+                <Label Text="Data utworzenia" Style="{StaticResource CrimsonLabelStyle}"/>
+                <Label Text="{Binding DataUtworzenia}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
+                <Label Text="Data modyfikacji" Style="{StaticResource CrimsonLabelStyle}"/>
+                <Label Text="{Binding DataModyfikacji}" Style="{StaticResource BlueLabelStyle}" FontSize="Medium" />
+                <RefreshView x:DataType="local:PacjentDetailsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+                    <StackLayout>
+                        <Label Text="&#x0a;Choroby" FontSize="Medium" FontAttributes="Bold"
                                        HorizontalOptions="Center" VerticalOptions="Center"/>
-                <CollectionView x:Name="PacjenciListView"
+                        <CollectionView x:Name="PacjenciListView"
                                 ItemsSource="{Binding HistorieChoroby}"
                                 SelectionMode="None">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <StackLayout Padding="10" x:DataType="model:HistoriaChorobyForView">
-                                <Label Text="{Binding Id}" 
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout Padding="10" x:DataType="model:HistoriaChorobyForView">
+                                        <Label Text="{Binding Id}" 
                                     LineBreakMode="NoWrap" 
                                     Style="{DynamicResource ListItemTextStyle}"
                                     FontSize="12" />
@@ -44,24 +44,24 @@
                                     LineBreakMode="NoWrap" 
                                     Style="{DynamicResource ListItemTextStyle}" 
                                     FontSize="16" />
-                                <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer
+                                        <StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer
                                 NumberOfTapsRequired="1"
                                 Command="{Binding Source={RelativeSource AncestorType={x:Type local:PacjentDetailsViewModel}}, Path=ItemTapped}"
                                 CommandParameter="{Binding .}">
-                                    </TapGestureRecognizer>
-                                </StackLayout.GestureRecognizers>
-                            </StackLayout>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
+                                            </TapGestureRecognizer>
+                                        </StackLayout.GestureRecognizers>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </StackLayout>
+                </RefreshView>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Anuluj" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />
+                    <Button Text="Usuń" Command="{Binding DeleteCommand}" Style="{StaticResource RedButton}" HorizontalOptions="FillAndExpand" />
+                    <Button Text="Dodaj chorobę" Command="{Binding AddHistoriaChorobyCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />
                 </StackLayout>
-            </RefreshView>
-            <StackLayout Orientation="Horizontal">
-                <Button Text="Anuluj" Command="{Binding CancelCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />
-                <Button Text="Usuń" Command="{Binding DeleteCommand}" Style="{StaticResource RedButton}" HorizontalOptions="FillAndExpand" />
-                <Button Text="Dodaj chorobę" Command="{Binding AddHistoriaChorobyCommand}" Style="{StaticResource YesButton}" HorizontalOptions="FillAndExpand" />
-            </StackLayout>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

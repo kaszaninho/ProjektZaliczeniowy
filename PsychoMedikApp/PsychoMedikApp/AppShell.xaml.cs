@@ -1,5 +1,4 @@
-﻿using PsychoMedikApp.ViewModels;
-using PsychoMedikApp.Views;
+﻿using PsychoMedikApp.Views;
 using PsychoMedikApp.Views.ChorobaView;
 using PsychoMedikApp.Views.HarmonogramView;
 using PsychoMedikApp.Views.HistoriaChorobyView;
@@ -10,7 +9,6 @@ using PsychoMedikApp.Views.PracownikView;
 using PsychoMedikApp.Views.StanowiskoView;
 using PsychoMedikApp.Views.WizytaView;
 using System;
-using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace PsychoMedikApp

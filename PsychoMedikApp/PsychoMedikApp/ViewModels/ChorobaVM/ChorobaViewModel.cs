@@ -1,9 +1,6 @@
 ﻿using PsychoMedik.Service.Reference;
 using PsychoMedikApp.ViewModels.Abstract;
 using PsychoMedikApp.Views.ChorobaView;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Xamarin.Forms;
 
 namespace PsychoMedikApp.ViewModels.ChorobaVM

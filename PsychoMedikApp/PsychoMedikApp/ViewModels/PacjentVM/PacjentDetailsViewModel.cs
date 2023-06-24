@@ -1,17 +1,12 @@
 ﻿using PsychoMedik.Service.Reference;
-using PsychoMedikApp.Helpers;
 using PsychoMedikApp.Services;
 using PsychoMedikApp.ViewModels.Abstract;
 using PsychoMedikApp.ViewModels.HistoriaChorobyVM;
-using PsychoMedikApp.ViewModels.WizytaVM;
 using PsychoMedikApp.Views.HistoriaChorobyView;
-using PsychoMedikApp.Views.WizytaView;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 

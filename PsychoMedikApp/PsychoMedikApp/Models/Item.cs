@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PsychoMedikApp.Models
+﻿namespace PsychoMedikApp.Models
 {
     public class Item
     {

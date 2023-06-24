@@ -1,8 +1,5 @@
 ﻿using PsychoMedikApp.Services;
-using PsychoMedikApp.Views;
-using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace PsychoMedikApp
 {

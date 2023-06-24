@@ -1,9 +1,7 @@
 ﻿using PsychoMedikApp.Services.Abstract;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 

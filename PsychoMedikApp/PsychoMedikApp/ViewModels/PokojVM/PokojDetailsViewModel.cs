@@ -1,8 +1,6 @@
 ﻿using PsychoMedik.Service.Reference;
 using PsychoMedikApp.ViewModels.Abstract;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PsychoMedikApp.ViewModels.PokojVM
 {

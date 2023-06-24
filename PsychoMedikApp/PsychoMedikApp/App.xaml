@@ -11,15 +11,15 @@
             <Color x:Key="BackgroundColor">#FFFFFF</Color>
             <Color x:Key="Primary">#398397</Color>
             <Style x:Key="BlueButton" TargetType="Button">
-                    <Setter Property="TextColor" Value="White"></Setter>
-                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
-                    <Setter Property="CornerRadius" Value="10" />
-                    <Setter Property="Padding" Value="10" />
-                    <Setter Property="Margin" Value="10" />
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="Margin" Value="10" />
 
                 <Setter Property="TextColor" Value="White"></Setter>
                 <Setter Property="VisualStateManager.VisualStateGroups">
-                    
+
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">

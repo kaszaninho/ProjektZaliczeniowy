@@ -12,6 +12,8 @@
     </ContentPage.ToolbarItems>
     <ScrollView>
         <StackLayout Margin="20" Padding="10">
+            <Label Text="&#x0a;Harmonogram" Style="{StaticResource LogoLabelStyle}"/>
+            <Image Source="schedule.png" WidthRequest="100" HeightRequest="50"></Image>
             <Label Text="Data początkowa:"
                                LineBreakMode="NoWrap"
                                Style="{DynamicResource CrimsonLabelStyle}"

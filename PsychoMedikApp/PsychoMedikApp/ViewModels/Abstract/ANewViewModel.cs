@@ -1,7 +1,4 @@
 ﻿using PsychoMedikApp.Services.Abstract;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Xamarin.Forms;
 
 namespace PsychoMedikApp.ViewModels.Abstract
